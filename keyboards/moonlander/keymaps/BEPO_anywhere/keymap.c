@@ -1317,139 +1317,145 @@ qk_tap_dance_action_t tap_dance_actions[] = {
         [DANCE_45] = ACTION_TAP_DANCE_FN_ADVANCED(on_dance_45, dance_45_finished, dance_45_reset),
 };
 
-bool caps_word_press_user(uint16_t keycode) {
-  switch (biton32(layer_state)) {
-    case 0:
-    case 1:
-    case 2:
-      switch (keycode) {
-          // Keycodes that continue Caps Word, with shift applied.
-          case BP_A:
-          case BP_B:
-          case BP_C:
-          case BP_D:
-          case BP_E:
-          case BP_F:
-          case BP_G:
-          case BP_H:
-          case BP_I:
-          case BP_J:
-          case BP_K:
-          case BP_L:
-          case BP_M:
-          case BP_N:
-          case BP_O:
-          case BP_P:
-          case BP_Q:
-          case BP_R:
-          case BP_S:
-          case BP_T:
-          case BP_U:
-          case BP_V:
-          case BP_W:
-          case BP_X:
-          case BP_Y:
-          case BP_Z:
-              add_weak_mods(MOD_BIT(KC_LSFT));  // Apply shift to next key.
-              return true;
+bool caps_word_press_user( uint16_t keycode )
+{
+   switch ( biton32( layer_state ) )
+   {
+      case 0:           // BEPO
+      case 1:
+      case 2:
+         switch ( keycode )
+         {
+            // Keycodes that continue Caps Word, with shift applied.
+            case BP_A:
+            case BP_B:
+            case BP_C:
+            case BP_D:
+            case BP_E:
+            case BP_F:
+            case BP_G:
+            case BP_H:
+            case BP_I:
+            case BP_J:
+            case BP_K:
+            case BP_L:
+            case BP_M:
+            case BP_N:
+            case BP_O:
+            case BP_P:
+            case BP_Q:
+            case BP_R:
+            case BP_S:
+            case BP_T:
+            case BP_U:
+            case BP_V:
+            case BP_W:
+            case BP_X:
+            case BP_Y:
+            case BP_Z:
+               add_weak_mods(MOD_BIT(KC_LSFT));  // Apply shift to next key.
+               return true;
 
-          // Keycodes that continue Caps Word, without shifting.
-          case BP_1 ... BP_0:
-          case KC_KP_1 ... KC_KP_0:
-          case KC_KP_MINUS:
-          case KC_BSPC:
-          case KC_DEL:
-          case BP_UNDS:
-          case BP_MINS:
-              return true;
+            // Keycodes that continue Caps Word, without shifting.
+            case BP_1 ... BP_0:
+            case KC_KP_1 ... KC_KP_0:
+            case KC_KP_MINUS:
+            case KC_BSPC:
+            case KC_DEL:
+            case BP_UNDS:
+            case BP_MINS:
+               return true;
 
-          default:
-              return false;  // Deactivate Caps Word.
-      }
-    case 3:
-    case 4:
-    case 5:
-      switch (keycode) {
-          // Keycodes that continue Caps Word, with shift applied.
-          case KC_A ... KC_Z:
-              add_weak_mods(MOD_BIT(KC_LSFT));  // Apply shift to next key.
-              return true;
+            default:
+               return false;  // Deactivate Caps Word.
+         }
+      case 3:           // QWERTY
+      case 4:
+      case 5:
+         switch ( keycode )
+         {
+            // Keycodes that continue Caps Word, with shift applied.
+            case KC_A ... KC_Z:
+               add_weak_mods(MOD_BIT(KC_LSFT));  // Apply shift to next key.
+               return true;
 
-          // Keycodes that continue Caps Word, without shifting.
-          case KC_1 ... KC_0:
-          case KC_KP_1 ... KC_KP_0:
-          case KC_KP_MINUS:
-          case KC_BSPC:
-          case KC_DEL:
-          case KC_UNDS:
-          case KC_MINS:
-              return true;
+            // Keycodes that continue Caps Word, without shifting.
+            case KC_1 ... KC_0:
+            case KC_KP_1 ... KC_KP_0:
+            case KC_KP_MINUS:
+            case KC_BSPC:
+            case KC_DEL:
+            case KC_UNDS:
+            case KC_MINS:
+               return true;
 
-          default:
-              return false;  // Deactivate Caps Word.
-      }
-    case 6:
-    case 7:
-    case 8:
-      switch (keycode) {
-          // Keycodes that continue Caps Word, with shift applied.
-          case FR_A:
-          case KC_B:
-          case KC_C:
-          case KC_D:
-          case KC_E:
-          case KC_F:
-          case KC_G:
-          case KC_H:
-          case KC_I:
-          case KC_J:
-          case KC_K:
-          case KC_L:
-          case FR_M:
-          case KC_N:
-          case KC_O:
-          case KC_P:
-          case FR_Q:
-          case KC_R:
-          case KC_S:
-          case KC_T:
-          case KC_U:
-          case KC_V:
-          case FR_W:
-          case KC_X:
-          case KC_Y:
-          case FR_Z:
-              add_weak_mods(MOD_BIT(KC_LSFT));  // Apply shift to next key.
-              return true;
+            default:
+               return false;  // Deactivate Caps Word.
+         }
+      case 6:           // AZERTY
+      case 7:
+      case 8:
+         switch ( keycode )
+         {
+            // Keycodes that continue Caps Word, with shift applied.
+            case FR_A:
+            case KC_B:
+            case KC_C:
+            case KC_D:
+            case KC_E:
+            case KC_F:
+            case KC_G:
+            case KC_H:
+            case KC_I:
+            case KC_J:
+            case KC_K:
+            case KC_L:
+            case FR_M:
+            case KC_N:
+            case KC_O:
+            case KC_P:
+            case FR_Q:
+            case KC_R:
+            case KC_S:
+            case KC_T:
+            case KC_U:
+            case KC_V:
+            case FR_W:
+            case KC_X:
+            case KC_Y:
+            case FR_Z:
+               add_weak_mods(MOD_BIT(KC_LSFT));  // Apply shift to next key.
+               return true;
 
-          // Keycodes that continue Caps Word, without shifting.
-          case FR_1 ... FR_0:
-          case KC_KP_1 ... KC_KP_0:
-          case KC_KP_MINUS:
-          case KC_BSPC:
-          case KC_DEL:
-          case FR_UNDS:
-          case FR_MINS:
-              return true;
+            // Keycodes that continue Caps Word, without shifting.
+            case FR_1 ... FR_0:
+            case KC_KP_1 ... KC_KP_0:
+            case KC_KP_MINUS:
+            case KC_BSPC:
+            case KC_DEL:
+            case FR_UNDS:
+            case FR_MINS:
+               return true;
 
-          default:
-              return false;  // Deactivate Caps Word.
-      }
-    case 9:
-      switch (keycode) {
-          // Keycodes that continue Caps Word, without shifting.
-          case KC_KP_1 ... KC_KP_0:
-          case KC_KP_MINUS:
-          case KC_BSPC:
-          case KC_DEL:
-              return true;
+            default:
+               return false;  // Deactivate Caps Word.
+         }
+      case 9:           // Keyboard
+         switch ( keycode )
+         {
+            // Keycodes that continue Caps Word, without shifting.
+            case KC_KP_1 ... KC_KP_0:
+            case KC_KP_MINUS:
+            case KC_BSPC:
+            case KC_DEL:
+               return true;
 
-          default:
-              return false;  // Deactivate Caps Word.
-      }
-    default:
-      return false;
-  }
+            default:
+               return false;  // Deactivate Caps Word.
+         }
+      default:
+         return false;
+   }
 
-  return false;
+   return false;
 }
