@@ -74,3 +74,19 @@ QMK is developed and maintained by Jack Humbert of OLKB with contributions from 
 ## Strategy
 
 To keep PRs small and easier to test, they should ideally be 1:1 with commits from QMK Firmware master. They should only group commits if/when it makes sense. Such as multiple commits for a specific feature (split RGB support, for instance)
+
+## Why this fork
+
+The only goal of this fork is to have the Caps WORD key working with all the mappings : bépo, qwerty international & azerty
+To work in the same way on Linux and Windows ( I didn't test it yet on mac, but I will )
+
+On windows :
+- use the bépo driver from https://download.tuxfamily.org/dvorak/windows/1.1rc2/bepo-1.1rc2-full-azerty.exe
+- use the qwerty international driver ( us international )
+- use the french azerty driver ( but for the ~ wil you will have to press the space key just after, not on Linux OS )
+
+On Linux :
+- use the fr bepo_afnor as bépo definition
+- use the us alt_intl as qwerty definition
+- use the fr latin9 as azerty definition
+
