@@ -137,7 +137,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_BSPACE,      BP_A,           BP_U,           BP_I,           BP_E,           TD(DANCE_8),    TD(DANCE_9),                                                                    KC_END,         BP_T,           BP_S,           BP_R,           BP_N,           BP_M,           KC_DOWN,        
     TD(DANCE_10),   BP_AGRV,        BP_Y,           BP_X,           TD(DANCE_11),   BP_K,                                           BP_Q,           BP_G,           BP_H,           BP_F,           BP_CCED,        TD(DANCE_22),   
     KC_LALT,        TD(DANCE_12),   TD(DANCE_13),   TT(2),          BP_C,           TD(DANCE_14),                                                                                                   TD(DANCE_24),   BP_W,           TT(1),          KC_LEFT,        KC_RIGHT,       TD(DANCE_23),   
-    KC_ENTER,       KC_LCTRL,       KC_ESCAPE,                      MT(MOD_RCTL, KC_ESCAPE),KC_RALT,        KC_SPACE
+    KC_ENTER,       KC_LCTRL,       MT(MOD_LGUI, KC_ESCAPE),                MT(MOD_RCTL, KC_ESCAPE),KC_RALT,        KC_SPACE
   ),
   [1] = LAYOUT_moonlander(
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
@@ -934,32 +934,32 @@ void dance_14_reset(qk_tap_dance_state_t *state, void *user_data);
 
 void on_dance_14(qk_tap_dance_state_t *state, void *user_data) {
     if(state->count == 3) {
-        tap_code16(KC_LGUI);
-        tap_code16(KC_LGUI);
-        tap_code16(KC_LGUI);
+        tap_code16(KC_MEDIA_PREV_TRACK);
+        tap_code16(KC_MEDIA_PREV_TRACK);
+        tap_code16(KC_MEDIA_PREV_TRACK);
     }
     if(state->count > 3) {
-        tap_code16(KC_LGUI);
+        tap_code16(KC_MEDIA_PREV_TRACK);
     }
 }
 
 void dance_14_finished(qk_tap_dance_state_t *state, void *user_data) {
     dance_state[14].step = dance_step(state);
     switch (dance_state[14].step) {
-        case SINGLE_TAP: register_code16(KC_LGUI); break;
+        case SINGLE_TAP: register_code16(KC_MEDIA_PREV_TRACK); break;
         case SINGLE_HOLD: register_code16(KC_LGUI); break;
         case DOUBLE_TAP: register_code16(KC_AUDIO_MUTE); break;
-        case DOUBLE_SINGLE_TAP: tap_code16(KC_LGUI); register_code16(KC_LGUI);
+        case DOUBLE_SINGLE_TAP: tap_code16(KC_MEDIA_PREV_TRACK); register_code16(KC_MEDIA_PREV_TRACK);
     }
 }
 
 void dance_14_reset(qk_tap_dance_state_t *state, void *user_data) {
     wait_ms(10);
     switch (dance_state[14].step) {
-        case SINGLE_TAP: unregister_code16(KC_LGUI); break;
+        case SINGLE_TAP: unregister_code16(KC_MEDIA_PREV_TRACK); break;
         case SINGLE_HOLD: unregister_code16(KC_LGUI); break;
         case DOUBLE_TAP: unregister_code16(KC_AUDIO_MUTE); break;
-        case DOUBLE_SINGLE_TAP: unregister_code16(KC_LGUI); break;
+        case DOUBLE_SINGLE_TAP: unregister_code16(KC_MEDIA_PREV_TRACK); break;
     }
     dance_state[14].step = 0;
 }
@@ -1273,32 +1273,32 @@ void dance_24_reset(qk_tap_dance_state_t *state, void *user_data);
 
 void on_dance_24(qk_tap_dance_state_t *state, void *user_data) {
     if(state->count == 3) {
-        tap_code16(KC_RGUI);
-        tap_code16(KC_RGUI);
-        tap_code16(KC_RGUI);
+        tap_code16(KC_MEDIA_NEXT_TRACK);
+        tap_code16(KC_MEDIA_NEXT_TRACK);
+        tap_code16(KC_MEDIA_NEXT_TRACK);
     }
     if(state->count > 3) {
-        tap_code16(KC_RGUI);
+        tap_code16(KC_MEDIA_NEXT_TRACK);
     }
 }
 
 void dance_24_finished(qk_tap_dance_state_t *state, void *user_data) {
     dance_state[24].step = dance_step(state);
     switch (dance_state[24].step) {
-        case SINGLE_TAP: register_code16(KC_RGUI); break;
+        case SINGLE_TAP: register_code16(KC_MEDIA_NEXT_TRACK); break;
         case SINGLE_HOLD: register_code16(KC_RGUI); break;
         case DOUBLE_TAP: register_code16(KC_AUDIO_MUTE); break;
-        case DOUBLE_SINGLE_TAP: tap_code16(KC_RGUI); register_code16(KC_RGUI);
+        case DOUBLE_SINGLE_TAP: tap_code16(KC_MEDIA_NEXT_TRACK); register_code16(KC_MEDIA_NEXT_TRACK);
     }
 }
 
 void dance_24_reset(qk_tap_dance_state_t *state, void *user_data) {
     wait_ms(10);
     switch (dance_state[24].step) {
-        case SINGLE_TAP: unregister_code16(KC_RGUI); break;
+        case SINGLE_TAP: unregister_code16(KC_MEDIA_NEXT_TRACK); break;
         case SINGLE_HOLD: unregister_code16(KC_RGUI); break;
         case DOUBLE_TAP: unregister_code16(KC_AUDIO_MUTE); break;
-        case DOUBLE_SINGLE_TAP: unregister_code16(KC_RGUI); break;
+        case DOUBLE_SINGLE_TAP: unregister_code16(KC_MEDIA_NEXT_TRACK); break;
     }
     dance_state[24].step = 0;
 }
@@ -2089,7 +2089,7 @@ void dance_47_finished(qk_tap_dance_state_t *state, void *user_data) {
     switch (dance_state[47].step) {
         case SINGLE_TAP: register_code16(KC_MEDIA_PREV_TRACK); break;
         case SINGLE_HOLD: register_code16(KC_MEDIA_REWIND); break;
-        case DOUBLE_TAP: register_code16(KC_AUDIO_VOL_DOWN); break;
+        case DOUBLE_TAP: register_code16(KC_MEDIA_PREV_TRACK); register_code16(KC_MEDIA_PREV_TRACK); break;
         case DOUBLE_SINGLE_TAP: tap_code16(KC_MEDIA_PREV_TRACK); register_code16(KC_MEDIA_PREV_TRACK);
     }
 }
@@ -2099,7 +2099,7 @@ void dance_47_reset(qk_tap_dance_state_t *state, void *user_data) {
     switch (dance_state[47].step) {
         case SINGLE_TAP: unregister_code16(KC_MEDIA_PREV_TRACK); break;
         case SINGLE_HOLD: unregister_code16(KC_MEDIA_REWIND); break;
-        case DOUBLE_TAP: unregister_code16(KC_AUDIO_VOL_DOWN); break;
+        case DOUBLE_TAP: unregister_code16(KC_MEDIA_PREV_TRACK); break;
         case DOUBLE_SINGLE_TAP: unregister_code16(KC_MEDIA_PREV_TRACK); break;
     }
     dance_state[47].step = 0;
@@ -2124,7 +2124,7 @@ void dance_48_finished(qk_tap_dance_state_t *state, void *user_data) {
     switch (dance_state[48].step) {
         case SINGLE_TAP: register_code16(KC_MEDIA_NEXT_TRACK); break;
         case SINGLE_HOLD: register_code16(KC_MEDIA_FAST_FORWARD); break;
-        case DOUBLE_TAP: register_code16(KC_AUDIO_VOL_UP); break;
+        case DOUBLE_TAP: register_code16(KC_MEDIA_NEXT_TRACK); register_code16(KC_MEDIA_NEXT_TRACK); break;
         case DOUBLE_SINGLE_TAP: tap_code16(KC_MEDIA_NEXT_TRACK); register_code16(KC_MEDIA_NEXT_TRACK);
     }
 }
@@ -2134,7 +2134,7 @@ void dance_48_reset(qk_tap_dance_state_t *state, void *user_data) {
     switch (dance_state[48].step) {
         case SINGLE_TAP: unregister_code16(KC_MEDIA_NEXT_TRACK); break;
         case SINGLE_HOLD: unregister_code16(KC_MEDIA_FAST_FORWARD); break;
-        case DOUBLE_TAP: unregister_code16(KC_AUDIO_VOL_UP); break;
+        case DOUBLE_TAP: unregister_code16(KC_MEDIA_NEXT_TRACK); break;
         case DOUBLE_SINGLE_TAP: unregister_code16(KC_MEDIA_NEXT_TRACK); break;
     }
     dance_state[48].step = 0;
