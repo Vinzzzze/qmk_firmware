@@ -2228,6 +2228,11 @@ bool caps_word_press_user( uint16_t keycode )
             case BP_X:
             case BP_Y:
             case BP_Z:
+            case BP_ECUT:
+            case BP_EGRV:
+            case BP_AGRV:
+            case BP_CCED:
+            case BP_UGRV:
                add_weak_mods(MOD_BIT(KC_LSFT));  // Apply shift to next key.
                return true;
 
@@ -2239,6 +2244,8 @@ bool caps_word_press_user( uint16_t keycode )
             case KC_DEL:
             case BP_UNDS:
             case BP_MINS:
+            case BP_DCRC:
+            case BP_DTRM:
                return true;
 
             default:
@@ -2262,6 +2269,10 @@ bool caps_word_press_user( uint16_t keycode )
             case KC_DEL:
             case KC_UNDS:
             case KC_MINS:
+            case KC_CIRC:
+            case KC_DQUO:
+            case KC_QUOTE:
+            case KC_GRAVE:
                return true;
 
             default:
