@@ -8,3 +8,6 @@ TAP_DANCE_ENABLE = yes
 SPACE_CADET_ENABLE = no
 CAPS_WORD_ENABLE = yes
 SRC = matrix.c
+
+PROGRAM_CMD = $(call EXEC_DFU)
+DFU_ARGS = -d 3297:0791 -a 0 -s 0x08002000:leave
