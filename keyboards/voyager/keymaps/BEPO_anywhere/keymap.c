@@ -2625,3 +2625,49 @@ bool caps_word_press_user(uint16_t keycode) {
 
    return false;
 }
+
+bool led_update_kb(led_t led_state) {
+    bool res = led_update_user(led_state);
+    if (res) {
+        STATUS_LED_2(led_state.num_lock);
+        STATUS_LED_4(led_state.caps_lock);
+    }
+    return res;
+}
+
+extern bool is_launching;
+
+layer_state_t layer_state_set_kb(layer_state_t state) {
+    state = layer_state_set_user(state);
+    if (is_launching || !keyboard_config.led_level) return state;
+#ifdef ORYX_ENABLE
+    if (rawhid_state.rgb_control) return state;
+#endif
+    bool LED_1 = false;
+    bool LED_3 = false;
+
+    uint8_t layer = get_highest_layer(state);
+    switch (layer) {
+        case 1:
+        case 4:
+        case 7:
+            LED_3 = true;
+            break;
+        case 2:
+        case 5:
+        case 8:
+            LED_1 = true;
+            break;
+        case 9:
+            LED_1 = true;
+            LED_3 = true;
+            break;
+        default:
+            break;
+    }
+
+    STATUS_LED_1(LED_1);
+    STATUS_LED_3(LED_3);
+
+    return state;
+}
