@@ -2641,11 +2641,6 @@ layer_state_t layer_state_set_kb(layer_state_t state) {
 }
 
 void caps_word_set_user(bool active) {
-    if (active) {
-       STATUS_LED_1(true);
-       STATUS_LED_3(true);
-    } else {
-       STATUS_LED_1(false);
-       STATUS_LED_3(false);
-    }
+    STATUS_LED_1(active);
+    STATUS_LED_3(active);
 }
