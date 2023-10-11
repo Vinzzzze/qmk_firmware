@@ -77,8 +77,12 @@ To keep PRs small and easier to test, they should ideally be 1:1 with commits fr
 
 ## Why this fork
 
-The only goal of this fork is to have the Caps WORD key working with all the mappings : bépo, qwerty international & azerty
+One goal of this fork is to have the Caps WORD key working with all the mappings : bépo, qwerty international & azerty
 To work in the same way on Linux and Windows ( I didn't test it yet on mac, but I will )
+The other goal is too have the leds showing the status of :
+Led 1 & 3 : Caps WORD activated
+Led 2 : Num Lock activated
+Led 4 : Caps Lock activated
 
 On windows :
 - use the bépo driver from https://download.tuxfamily.org/dvorak/windows/1.1rc2/bepo-1.1rc2-full-azerty.exe
