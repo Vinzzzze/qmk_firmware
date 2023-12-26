@@ -20,7 +20,7 @@
 #undef MOUSEKEY_TIME_TO_MAX
 #define MOUSEKEY_TIME_TO_MAX 25
 
-#define FIRMWARE_VERSION u8"RXaZe/bRxz5"
+#define FIRMWARE_VERSION u8"RXaZe/KGrA7"
 #define RAW_USAGE_PAGE 0xFF60
 #define RAW_USAGE_ID 0x61
 #define LAYER_STATE_16BIT
@@ -71,4 +71,5 @@
 #undef ENABLE_RGB_MATRIX_SOLID_SPLASH
 #undef ENABLE_RGB_MATRIX_SOLID_MULTISPLASH
 
+/* Use the leds to see the caps / num / scroll lock */
 #define MOONLANDER_USER_LEDS
