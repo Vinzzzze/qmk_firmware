@@ -3,20 +3,17 @@
   See config.h options at https://docs.qmk.fm/#/config_options?id=the-configh-file
 */
 #define ORYX_CONFIGURATOR
-#undef IGNORE_MOD_TAP_INTERRUPT
 #undef TAPPING_TERM
 #define TAPPING_TERM 160
 
-#define PERMISSIVE_HOLD
-
-#undef RGB_DISABLE_TIMEOUT
-#define RGB_DISABLE_TIMEOUT 120000
+#undef RGB_MATRIX_TIMEOUT
+#define RGB_MATRIX_TIMEOUT 120000
 
 #define USB_SUSPEND_WAKEUP_DELAY 0
 #undef MOUSEKEY_WHEEL_DELAY
 #define MOUSEKEY_WHEEL_DELAY 300
 
-#define FIRMWARE_VERSION u8"oybND/nELGW"
+#define FIRMWARE_VERSION u8"oybND/WOVe3"
 #define RAW_USAGE_PAGE 0xFF60
 #define RAW_USAGE_ID 0x61
 #define LAYER_STATE_16BIT
