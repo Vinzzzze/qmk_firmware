@@ -3,7 +3,6 @@
   See config.h options at https://docs.qmk.fm/#/config_options?id=the-configh-file
 */
 #define ORYX_CONFIGURATOR
-#undef IGNORE_MOD_TAP_INTERRUPT
 #undef TAPPING_TERM
 #define TAPPING_TERM 160
 
@@ -20,7 +19,7 @@
 #undef MOUSEKEY_TIME_TO_MAX
 #define MOUSEKEY_TIME_TO_MAX 25
 
-#define FIRMWARE_VERSION u8"RXaZe/eDPQy"
+#define FIRMWARE_VERSION u8"RXaZe/zZqLG"
 #define RAW_USAGE_PAGE 0xFF60
 #define RAW_USAGE_ID 0x61
 #define LAYER_STATE_16BIT
