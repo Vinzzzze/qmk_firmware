@@ -1,4 +1,3 @@
-#define BP_DCRC KC_Y
 #define BP_B KC_Q
 #define BP_ECUT KC_W
 #define BP_P KC_E
@@ -48,6 +47,7 @@
 #define BP_LPRN KC_4
 #define BP_EQL KC_MINS
 #define BP_EURO ALGR(KC_F)
+#define BP_DCRC KC_Y
 #define BP_GRTR ALGR(KC_3)
 #define BP_SLSH KC_9
 #define BP_PLUS KC_7
@@ -74,10 +74,9 @@
 #define BP_DQOT KC_1
 #define BP_DTRM ALGR(KC_D)
 #define BP_DEGR S(KC_MINS)
+#define BP_MDSH ALGR(KC_1)
 #define BP_RCBR ALGR(KC_C)
 #define BP_UGRV ALGR(KC_S)
-#define BP_MDSH ALGR(KC_1)
-#define FR_CIRC KC_LBRC
 #define FR_EACU KC_2
 #define FR_EGRV KC_7
 #define FR_A KC_Q
@@ -106,6 +105,7 @@
 #define FR_LPRN KC_5
 #define FR_EQL KC_EQL
 #define FR_EURO ALGR(KC_E)
+#define FR_CCIRC KC_LBRC
 #define FR_GRTR S(KC_NUBS)
 #define FR_SLSH S(KC_DOT)
 #define FR_PLUS S(KC_EQL)
@@ -129,7 +129,6 @@
 #define FR_QUES S(KC_M)
 #define FR_LCBR ALGR(KC_4)
 #define FR_SECT S(KC_SLSH)
-#define FR_CCIRC KC_LBRC
 #define FR_DQUO KC_3
 #define FR_UMLT S(KC_LBRC)
 #define FR_OVRR S(KC_MINS)
