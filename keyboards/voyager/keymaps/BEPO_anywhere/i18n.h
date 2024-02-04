@@ -26,12 +26,12 @@
 #define BP_R KC_L
 #define BP_N KC_SCLN
 #define BP_M KC_QUOT
-#define BP_Q KC_M
+#define BP_CCED KC_BSLS
 #define BP_G KC_COMM
 #define BP_H KC_DOT
 #define BP_F KC_SLSH
-#define BP_CCED KC_BSLS
 #define BP_W KC_RBRC
+#define BP_Q KC_M
 #define BP_PIPE ALGR(KC_Q)
 #define BP_AMPR ALGR(KC_E)
 #define BP_MINS KC_8
@@ -87,9 +87,9 @@
 #define FR_COLN KC_DOT
 #define FR_Z KC_W
 #define FR_M KC_SCLN
-#define FR_Q KC_A
 #define FR_CCED KC_9
 #define FR_W KC_Z
+#define FR_Q KC_A
 #define FR_PIPE ALGR(KC_6)
 #define FR_AMP KC_1
 #define FR_MINS KC_6
