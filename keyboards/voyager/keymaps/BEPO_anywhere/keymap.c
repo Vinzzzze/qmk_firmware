@@ -122,8 +122,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     TO(9),          BP_PIPE,        BP_AMPR,        BP_MINS,        BP_ASTR,        TD(DANCE_8),                                    TD(DANCE_9),    BP_SLSH,        BP_PLUS,        BP_HASH,        BP_BSLS,        KC_TRANSPARENT, 
     KC_TRANSPARENT, BP_6,           BP_4,           BP_8,           BP_0,           BP_2,                                           BP_3,           BP_1,           BP_9,           BP_5,           BP_7,           KC_TRANSPARENT, 
     KC_TRANSPARENT, BP_UNDS,        BP_LBRC,        BP_LPRN,        BP_EQL,         KC_TRANSPARENT,                                 KC_TRANSPARENT, BP_PERC,        BP_RPRN,        BP_RBRC,        BP_EXLM,        CW_TOGG,        
-    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, BP_LESS,        BP_GRTR,                                        TD(DANCE_10),   BP_DLR,         KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
-                                                    BP_DCRC,        KC_ENTER,                                       KC_TRANSPARENT, KC_TRANSPARENT
+    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, BP_DCRC,        BP_LESS,                                        TD(DANCE_10),   BP_DLR,         KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
+                                                    BP_GRTR,        KC_ENTER,                                       KC_TRANSPARENT, KC_TRANSPARENT
   ),
   [2] = LAYOUT_voyager(
     KC_DELETE,      TD(DANCE_11),   TD(DANCE_12),   TD(DANCE_13),   TD(DANCE_14),   TD(DANCE_15),                                   TD(DANCE_18),   TD(DANCE_19),   TD(DANCE_20),   TD(DANCE_21),   TD(DANCE_22),   KC_TRANSPARENT, 
@@ -143,8 +143,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     TO(9),          KC_PIPE,        KC_AMPR,        KC_MINUS,       KC_ASTR,        TD(DANCE_27),                                   TD(DANCE_28),   KC_SLASH,       KC_PLUS,        KC_HASH,        KC_BSLS,        KC_TRANSPARENT, 
     KC_TRANSPARENT, KC_6,           KC_4,           KC_8,           KC_0,           KC_2,                                           KC_3,           KC_1,           KC_9,           KC_5,           KC_7,           KC_TRANSPARENT, 
     KC_TRANSPARENT, KC_UNDS,        KC_LBRC,        KC_LPRN,        KC_EQUAL,       KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_PERC,        KC_RPRN,        KC_RBRC,        KC_EXLM,        CW_TOGG,        
-    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_LABK,        KC_RABK,                                        TD(DANCE_29),   KC_DLR,         KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
-                                                    KC_CIRC,        KC_ENTER,                                       KC_TRANSPARENT, KC_TRANSPARENT
+    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_CIRC,        KC_LABK,                                        TD(DANCE_29),   KC_DLR,         KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
+                                                    KC_RABK,        KC_ENTER,                                       KC_TRANSPARENT, KC_TRANSPARENT
   ),
   [5] = LAYOUT_voyager(
     KC_DELETE,      TD(DANCE_30),   TD(DANCE_31),   TD(DANCE_32),   TD(DANCE_33),   TD(DANCE_34),                                   TD(DANCE_37),   TD(DANCE_38),   TD(DANCE_39),   TD(DANCE_40),   TD(DANCE_41),   KC_TRANSPARENT, 
@@ -164,8 +164,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     TO(9),          FR_PIPE,        FR_AMP,         FR_MINS,        FR_ASTR,        TD(DANCE_46),                                   TD(DANCE_47),   FR_SLSH,        FR_PLUS,        FR_HASH,        FR_BSLS,        KC_TRANSPARENT, 
     KC_TRANSPARENT, FR_6,           FR_4,           FR_8,           FR_0,           FR_2,                                           FR_3,           FR_1,           FR_9,           FR_5,           FR_7,           KC_TRANSPARENT, 
     KC_TRANSPARENT, FR_UNDS,        FR_LBRC,        FR_LPRN,        FR_EQL,         KC_TRANSPARENT,                                 KC_TRANSPARENT, FR_PERC,        FR_RPRN,        FR_RBRC,        FR_EXLM,        CW_TOGG,        
-    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, FR_LESS,        FR_GRTR,                                        TD(DANCE_48),   FR_DLR,         KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
-                                                    FR_CCIRC,       KC_ENTER,                                       KC_TRANSPARENT, KC_TRANSPARENT
+    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, FR_CCIRC,       FR_LESS,                                        TD(DANCE_48),   FR_DLR,         KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
+                                                    FR_GRTR,        KC_ENTER,                                       KC_TRANSPARENT, KC_TRANSPARENT
   ),
   [8] = LAYOUT_voyager(
     KC_DELETE,      TD(DANCE_49),   TD(DANCE_50),   TD(DANCE_51),   TD(DANCE_52),   TD(DANCE_53),                                   TD(DANCE_56),   TD(DANCE_57),   TD(DANCE_58),   TD(DANCE_59),   TD(DANCE_60),   KC_TRANSPARENT, 
