@@ -107,7 +107,6 @@ enum tap_dance_codes {
   DANCE_75,
   DANCE_76,
   DANCE_77,
-  DANCE_78,
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -175,11 +174,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                     KC_ENTER,       TD(DANCE_55),                                   KC_TRANSPARENT, KC_ESCAPE
   ),
   [9] = LAYOUT_voyager(
-    TD(DANCE_63),   TD(DANCE_64),   TD(DANCE_65),   TD(DANCE_66),   TD(DANCE_67),   TD(DANCE_68),                                   TD(DANCE_69),   TD(DANCE_70),   TD(DANCE_71),   TD(DANCE_72),   TD(DANCE_73),   KC_MS_UP,       
+    KC_TRANSPARENT, TD(DANCE_63),   TD(DANCE_64),   TD(DANCE_65),   TD(DANCE_66),   TD(DANCE_67),                                   TD(DANCE_68),   TD(DANCE_69),   TD(DANCE_70),   TD(DANCE_71),   TD(DANCE_72),   KC_MS_UP,       
     KC_TRANSPARENT, KC_KP_6,        KC_KP_4,        KC_KP_8,        KC_KP_0,        KC_KP_2,                                        KC_KP_3,        KC_KP_1,        KC_KP_9,        KC_KP_5,        KC_KP_7,        KC_MS_DOWN,     
-    KC_LEFT_SHIFT,  KC_MS_BTN1,     KC_MS_BTN3,     KC_MS_BTN2,     KC_KP_DOT,      KC_MS_WH_UP,                                    KC_MS_WH_DOWN,  TD(DANCE_74),   TD(DANCE_75),   TD(DANCE_76),   KC_KP_COMMA,    KC_NUM,         
-    KC_TRANSPARENT, KC_MS_WH_LEFT,  KC_MS_WH_RIGHT, RGB_TOG,        TOGGLE_LAYER_COLOR,KC_TRANSPARENT,                                 KC_TRANSPARENT, TD(DANCE_77),   TD(DANCE_78),   KC_MS_LEFT,     KC_MS_RIGHT,    KC_TRANSPARENT, 
-                                                    KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT
+    KC_LEFT_SHIFT,  KC_MS_BTN1,     KC_MS_BTN3,     KC_MS_BTN2,     KC_KP_DOT,      KC_TRANSPARENT,                                 KC_TRANSPARENT, TD(DANCE_73),   TD(DANCE_74),   TD(DANCE_75),   KC_KP_COMMA,    KC_NUM,         
+    KC_TRANSPARENT, KC_MS_WH_LEFT,  KC_MS_WH_RIGHT, RGB_TOG,        TOGGLE_LAYER_COLOR,KC_MS_WH_UP,                                    KC_MS_WH_DOWN,  TD(DANCE_76),   TD(DANCE_77),   KC_MS_LEFT,     KC_MS_RIGHT,    KC_TRANSPARENT, 
+                                                    KC_KP_ENTER,    KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT
   ),
 };
 
@@ -210,7 +209,7 @@ const uint8_t PROGMEM ledmap[][RGB_MATRIX_LED_COUNT][3] = {
 
     [8] = { {225,224,255}, {19,245,255}, {19,245,255}, {19,245,255}, {19,245,255}, {19,245,255}, {152,255,255}, {152,255,255}, {152,255,255}, {152,255,255}, {152,255,255}, {152,255,255}, {0,245,245}, {152,255,255}, {152,255,255}, {152,255,255}, {152,255,255}, {225,224,255}, {0,245,245}, {46,215,244}, {46,215,244}, {0,0,255}, {152,255,255}, {152,255,255}, {225,224,255}, {19,245,255}, {19,245,255}, {19,245,255}, {19,245,255}, {19,245,255}, {19,245,255}, {46,215,244}, {152,255,255}, {152,255,255}, {152,255,255}, {152,255,255}, {152,255,255}, {46,215,244}, {0,245,245}, {152,255,255}, {152,255,255}, {152,255,255}, {152,255,255}, {0,245,245}, {152,255,255}, {152,255,255}, {152,255,255}, {46,215,244}, {46,215,244}, {0,245,245}, {19,245,255}, {225,224,255} },
 
-    [9] = { {225,224,255}, {0,0,255}, {0,0,255}, {0,0,255}, {19,245,255}, {19,245,255}, {62,219,138}, {62,219,138}, {62,219,138}, {62,219,138}, {62,219,138}, {62,219,138}, {0,245,245}, {19,245,255}, {19,245,255}, {19,245,255}, {62,219,138}, {46,215,244}, {0,245,245}, {46,215,244}, {46,215,244}, {74,255,255}, {74,255,255}, {225,224,255}, {225,224,255}, {19,245,255}, {19,245,255}, {19,245,255}, {19,245,255}, {19,245,255}, {19,245,255}, {46,215,244}, {62,219,138}, {62,219,138}, {62,219,138}, {62,219,138}, {62,219,138}, {46,215,244}, {46,215,244}, {19,245,255}, {74,255,255}, {19,245,255}, {62,219,138}, {188,255,255}, {0,245,245}, {152,255,255}, {152,255,255}, {46,215,244}, {46,215,244}, {0,245,245}, {19,245,255}, {62,219,138} },
+    [9] = { {225,224,255}, {0,0,255}, {0,0,255}, {0,0,255}, {19,245,255}, {19,245,255}, {62,219,138}, {62,219,138}, {62,219,138}, {62,219,138}, {62,219,138}, {62,219,138}, {0,245,245}, {19,245,255}, {19,245,255}, {19,245,255}, {62,219,138}, {225,224,255}, {0,245,245}, {46,215,244}, {46,215,244}, {74,255,255}, {74,255,255}, {46,215,244}, {225,224,255}, {19,245,255}, {19,245,255}, {19,245,255}, {19,245,255}, {19,245,255}, {19,245,255}, {46,215,244}, {62,219,138}, {62,219,138}, {62,219,138}, {62,219,138}, {62,219,138}, {46,215,244}, {0,245,245}, {19,245,255}, {74,255,255}, {19,245,255}, {62,219,138}, {188,255,255}, {46,215,244}, {152,255,255}, {152,255,255}, {46,215,244}, {46,215,244}, {0,245,245}, {19,245,255}, {62,219,138} },
 
 };
 
@@ -394,7 +393,7 @@ enum {
     MORE_TAPS
 };
 
-static tap dance_state[79];
+static tap dance_state[78];
 
 uint8_t dance_step(tap_dance_state_t *state);
 
@@ -2556,38 +2555,22 @@ void dance_62_reset(tap_dance_state_t *state, void *user_data) {
     }
     dance_state[62].step = 0;
 }
-void on_dance_63(tap_dance_state_t *state, void *user_data);
 void dance_63_finished(tap_dance_state_t *state, void *user_data);
 void dance_63_reset(tap_dance_state_t *state, void *user_data);
-
-void on_dance_63(tap_dance_state_t *state, void *user_data) {
-    if(state->count == 3) {
-        tap_code16(KC_DELETE);
-        tap_code16(KC_DELETE);
-        tap_code16(KC_DELETE);
-    }
-    if(state->count > 3) {
-        tap_code16(KC_DELETE);
-    }
-}
 
 void dance_63_finished(tap_dance_state_t *state, void *user_data) {
     dance_state[63].step = dance_step(state);
     switch (dance_state[63].step) {
-        case SINGLE_TAP: register_code16(KC_DELETE); break;
-        case SINGLE_HOLD: register_code16(LALT(LCTL(KC_DELETE))); break;
-        case DOUBLE_TAP: register_code16(KC_DELETE); register_code16(KC_DELETE); break;
-        case DOUBLE_SINGLE_TAP: tap_code16(KC_DELETE); register_code16(KC_DELETE);
+        case SINGLE_TAP: layer_move(0); break;
+        case DOUBLE_TAP: register_code16(KC_F6); break;
+        case DOUBLE_SINGLE_TAP: layer_move(0); break;
     }
 }
 
 void dance_63_reset(tap_dance_state_t *state, void *user_data) {
     wait_ms(10);
     switch (dance_state[63].step) {
-        case SINGLE_TAP: unregister_code16(KC_DELETE); break;
-        case SINGLE_HOLD: unregister_code16(LALT(LCTL(KC_DELETE))); break;
-        case DOUBLE_TAP: unregister_code16(KC_DELETE); break;
-        case DOUBLE_SINGLE_TAP: unregister_code16(KC_DELETE); break;
+        case DOUBLE_TAP: unregister_code16(KC_F6); break;
     }
     dance_state[63].step = 0;
 }
@@ -2597,16 +2580,16 @@ void dance_64_reset(tap_dance_state_t *state, void *user_data);
 void dance_64_finished(tap_dance_state_t *state, void *user_data) {
     dance_state[64].step = dance_step(state);
     switch (dance_state[64].step) {
-        case SINGLE_TAP: layer_move(0); break;
-        case DOUBLE_TAP: register_code16(KC_F6); break;
-        case DOUBLE_SINGLE_TAP: layer_move(0); break;
+        case SINGLE_TAP: layer_move(3); break;
+        case DOUBLE_TAP: register_code16(KC_F4); break;
+        case DOUBLE_SINGLE_TAP: layer_move(3); break;
     }
 }
 
 void dance_64_reset(tap_dance_state_t *state, void *user_data) {
     wait_ms(10);
     switch (dance_state[64].step) {
-        case DOUBLE_TAP: unregister_code16(KC_F6); break;
+        case DOUBLE_TAP: unregister_code16(KC_F4); break;
     }
     dance_state[64].step = 0;
 }
@@ -2616,35 +2599,49 @@ void dance_65_reset(tap_dance_state_t *state, void *user_data);
 void dance_65_finished(tap_dance_state_t *state, void *user_data) {
     dance_state[65].step = dance_step(state);
     switch (dance_state[65].step) {
-        case SINGLE_TAP: layer_move(3); break;
-        case DOUBLE_TAP: register_code16(KC_F4); break;
-        case DOUBLE_SINGLE_TAP: layer_move(3); break;
-    }
-}
-
-void dance_65_reset(tap_dance_state_t *state, void *user_data) {
-    wait_ms(10);
-    switch (dance_state[65].step) {
-        case DOUBLE_TAP: unregister_code16(KC_F4); break;
-    }
-    dance_state[65].step = 0;
-}
-void dance_66_finished(tap_dance_state_t *state, void *user_data);
-void dance_66_reset(tap_dance_state_t *state, void *user_data);
-
-void dance_66_finished(tap_dance_state_t *state, void *user_data) {
-    dance_state[66].step = dance_step(state);
-    switch (dance_state[66].step) {
         case SINGLE_TAP: layer_move(6); break;
         case DOUBLE_TAP: register_code16(KC_F8); break;
         case DOUBLE_SINGLE_TAP: layer_move(6); break;
     }
 }
 
+void dance_65_reset(tap_dance_state_t *state, void *user_data) {
+    wait_ms(10);
+    switch (dance_state[65].step) {
+        case DOUBLE_TAP: unregister_code16(KC_F8); break;
+    }
+    dance_state[65].step = 0;
+}
+void on_dance_66(tap_dance_state_t *state, void *user_data);
+void dance_66_finished(tap_dance_state_t *state, void *user_data);
+void dance_66_reset(tap_dance_state_t *state, void *user_data);
+
+void on_dance_66(tap_dance_state_t *state, void *user_data) {
+    if(state->count == 3) {
+        tap_code16(KC_F10);
+        tap_code16(KC_F10);
+        tap_code16(KC_F10);
+    }
+    if(state->count > 3) {
+        tap_code16(KC_F10);
+    }
+}
+
+void dance_66_finished(tap_dance_state_t *state, void *user_data) {
+    dance_state[66].step = dance_step(state);
+    switch (dance_state[66].step) {
+        case SINGLE_TAP: register_code16(KC_F10); break;
+        case DOUBLE_TAP: register_code16(KC_APPLICATION); break;
+        case DOUBLE_SINGLE_TAP: tap_code16(KC_F10); register_code16(KC_F10);
+    }
+}
+
 void dance_66_reset(tap_dance_state_t *state, void *user_data) {
     wait_ms(10);
     switch (dance_state[66].step) {
-        case DOUBLE_TAP: unregister_code16(KC_F8); break;
+        case SINGLE_TAP: unregister_code16(KC_F10); break;
+        case DOUBLE_TAP: unregister_code16(KC_APPLICATION); break;
+        case DOUBLE_SINGLE_TAP: unregister_code16(KC_F10); break;
     }
     dance_state[66].step = 0;
 }
@@ -2654,30 +2651,30 @@ void dance_67_reset(tap_dance_state_t *state, void *user_data);
 
 void on_dance_67(tap_dance_state_t *state, void *user_data) {
     if(state->count == 3) {
-        tap_code16(KC_F10);
-        tap_code16(KC_F10);
-        tap_code16(KC_F10);
+        tap_code16(KC_F2);
+        tap_code16(KC_F2);
+        tap_code16(KC_F2);
     }
     if(state->count > 3) {
-        tap_code16(KC_F10);
+        tap_code16(KC_F2);
     }
 }
 
 void dance_67_finished(tap_dance_state_t *state, void *user_data) {
     dance_state[67].step = dance_step(state);
     switch (dance_state[67].step) {
-        case SINGLE_TAP: register_code16(KC_F10); break;
-        case DOUBLE_TAP: register_code16(KC_APPLICATION); break;
-        case DOUBLE_SINGLE_TAP: tap_code16(KC_F10); register_code16(KC_F10);
+        case SINGLE_TAP: register_code16(KC_F2); break;
+        case DOUBLE_TAP: register_code16(KC_F12); break;
+        case DOUBLE_SINGLE_TAP: tap_code16(KC_F2); register_code16(KC_F2);
     }
 }
 
 void dance_67_reset(tap_dance_state_t *state, void *user_data) {
     wait_ms(10);
     switch (dance_state[67].step) {
-        case SINGLE_TAP: unregister_code16(KC_F10); break;
-        case DOUBLE_TAP: unregister_code16(KC_APPLICATION); break;
-        case DOUBLE_SINGLE_TAP: unregister_code16(KC_F10); break;
+        case SINGLE_TAP: unregister_code16(KC_F2); break;
+        case DOUBLE_TAP: unregister_code16(KC_F12); break;
+        case DOUBLE_SINGLE_TAP: unregister_code16(KC_F2); break;
     }
     dance_state[67].step = 0;
 }
@@ -2687,30 +2684,30 @@ void dance_68_reset(tap_dance_state_t *state, void *user_data);
 
 void on_dance_68(tap_dance_state_t *state, void *user_data) {
     if(state->count == 3) {
-        tap_code16(KC_F2);
-        tap_code16(KC_F2);
-        tap_code16(KC_F2);
+        tap_code16(KC_F3);
+        tap_code16(KC_F3);
+        tap_code16(KC_F3);
     }
     if(state->count > 3) {
-        tap_code16(KC_F2);
+        tap_code16(KC_F3);
     }
 }
 
 void dance_68_finished(tap_dance_state_t *state, void *user_data) {
     dance_state[68].step = dance_step(state);
     switch (dance_state[68].step) {
-        case SINGLE_TAP: register_code16(KC_F2); break;
-        case DOUBLE_TAP: register_code16(KC_F12); break;
-        case DOUBLE_SINGLE_TAP: tap_code16(KC_F2); register_code16(KC_F2);
+        case SINGLE_TAP: register_code16(KC_F3); break;
+        case DOUBLE_TAP: register_code16(KC_F13); break;
+        case DOUBLE_SINGLE_TAP: tap_code16(KC_F3); register_code16(KC_F3);
     }
 }
 
 void dance_68_reset(tap_dance_state_t *state, void *user_data) {
     wait_ms(10);
     switch (dance_state[68].step) {
-        case SINGLE_TAP: unregister_code16(KC_F2); break;
-        case DOUBLE_TAP: unregister_code16(KC_F12); break;
-        case DOUBLE_SINGLE_TAP: unregister_code16(KC_F2); break;
+        case SINGLE_TAP: unregister_code16(KC_F3); break;
+        case DOUBLE_TAP: unregister_code16(KC_F13); break;
+        case DOUBLE_SINGLE_TAP: unregister_code16(KC_F3); break;
     }
     dance_state[68].step = 0;
 }
@@ -2720,30 +2717,30 @@ void dance_69_reset(tap_dance_state_t *state, void *user_data);
 
 void on_dance_69(tap_dance_state_t *state, void *user_data) {
     if(state->count == 3) {
-        tap_code16(KC_F3);
-        tap_code16(KC_F3);
-        tap_code16(KC_F3);
+        tap_code16(KC_F1);
+        tap_code16(KC_F1);
+        tap_code16(KC_F1);
     }
     if(state->count > 3) {
-        tap_code16(KC_F3);
+        tap_code16(KC_F1);
     }
 }
 
 void dance_69_finished(tap_dance_state_t *state, void *user_data) {
     dance_state[69].step = dance_step(state);
     switch (dance_state[69].step) {
-        case SINGLE_TAP: register_code16(KC_F3); break;
-        case DOUBLE_TAP: register_code16(KC_F13); break;
-        case DOUBLE_SINGLE_TAP: tap_code16(KC_F3); register_code16(KC_F3);
+        case SINGLE_TAP: register_code16(KC_F1); break;
+        case DOUBLE_TAP: register_code16(KC_F11); break;
+        case DOUBLE_SINGLE_TAP: tap_code16(KC_F1); register_code16(KC_F1);
     }
 }
 
 void dance_69_reset(tap_dance_state_t *state, void *user_data) {
     wait_ms(10);
     switch (dance_state[69].step) {
-        case SINGLE_TAP: unregister_code16(KC_F3); break;
-        case DOUBLE_TAP: unregister_code16(KC_F13); break;
-        case DOUBLE_SINGLE_TAP: unregister_code16(KC_F3); break;
+        case SINGLE_TAP: unregister_code16(KC_F1); break;
+        case DOUBLE_TAP: unregister_code16(KC_F11); break;
+        case DOUBLE_SINGLE_TAP: unregister_code16(KC_F1); break;
     }
     dance_state[69].step = 0;
 }
@@ -2753,30 +2750,30 @@ void dance_70_reset(tap_dance_state_t *state, void *user_data);
 
 void on_dance_70(tap_dance_state_t *state, void *user_data) {
     if(state->count == 3) {
-        tap_code16(KC_F1);
-        tap_code16(KC_F1);
-        tap_code16(KC_F1);
+        tap_code16(KC_F9);
+        tap_code16(KC_F9);
+        tap_code16(KC_F9);
     }
     if(state->count > 3) {
-        tap_code16(KC_F1);
+        tap_code16(KC_F9);
     }
 }
 
 void dance_70_finished(tap_dance_state_t *state, void *user_data) {
     dance_state[70].step = dance_step(state);
     switch (dance_state[70].step) {
-        case SINGLE_TAP: register_code16(KC_F1); break;
-        case DOUBLE_TAP: register_code16(KC_F11); break;
-        case DOUBLE_SINGLE_TAP: tap_code16(KC_F1); register_code16(KC_F1);
+        case SINGLE_TAP: register_code16(KC_F9); break;
+        case DOUBLE_TAP: register_code16(KC_MEDIA_EJECT); break;
+        case DOUBLE_SINGLE_TAP: tap_code16(KC_F9); register_code16(KC_F9);
     }
 }
 
 void dance_70_reset(tap_dance_state_t *state, void *user_data) {
     wait_ms(10);
     switch (dance_state[70].step) {
-        case SINGLE_TAP: unregister_code16(KC_F1); break;
-        case DOUBLE_TAP: unregister_code16(KC_F11); break;
-        case DOUBLE_SINGLE_TAP: unregister_code16(KC_F1); break;
+        case SINGLE_TAP: unregister_code16(KC_F9); break;
+        case DOUBLE_TAP: unregister_code16(KC_MEDIA_EJECT); break;
+        case DOUBLE_SINGLE_TAP: unregister_code16(KC_F9); break;
     }
     dance_state[70].step = 0;
 }
@@ -2786,30 +2783,30 @@ void dance_71_reset(tap_dance_state_t *state, void *user_data);
 
 void on_dance_71(tap_dance_state_t *state, void *user_data) {
     if(state->count == 3) {
-        tap_code16(KC_F9);
-        tap_code16(KC_F9);
-        tap_code16(KC_F9);
+        tap_code16(KC_F5);
+        tap_code16(KC_F5);
+        tap_code16(KC_F5);
     }
     if(state->count > 3) {
-        tap_code16(KC_F9);
+        tap_code16(KC_F5);
     }
 }
 
 void dance_71_finished(tap_dance_state_t *state, void *user_data) {
     dance_state[71].step = dance_step(state);
     switch (dance_state[71].step) {
-        case SINGLE_TAP: register_code16(KC_F9); break;
-        case DOUBLE_TAP: register_code16(KC_MEDIA_EJECT); break;
-        case DOUBLE_SINGLE_TAP: tap_code16(KC_F9); register_code16(KC_F9);
+        case SINGLE_TAP: register_code16(KC_F5); break;
+        case DOUBLE_TAP: register_code16(KC_WWW_REFRESH); break;
+        case DOUBLE_SINGLE_TAP: tap_code16(KC_F5); register_code16(KC_F5);
     }
 }
 
 void dance_71_reset(tap_dance_state_t *state, void *user_data) {
     wait_ms(10);
     switch (dance_state[71].step) {
-        case SINGLE_TAP: unregister_code16(KC_F9); break;
-        case DOUBLE_TAP: unregister_code16(KC_MEDIA_EJECT); break;
-        case DOUBLE_SINGLE_TAP: unregister_code16(KC_F9); break;
+        case SINGLE_TAP: unregister_code16(KC_F5); break;
+        case DOUBLE_TAP: unregister_code16(KC_WWW_REFRESH); break;
+        case DOUBLE_SINGLE_TAP: unregister_code16(KC_F5); break;
     }
     dance_state[71].step = 0;
 }
@@ -2819,30 +2816,30 @@ void dance_72_reset(tap_dance_state_t *state, void *user_data);
 
 void on_dance_72(tap_dance_state_t *state, void *user_data) {
     if(state->count == 3) {
-        tap_code16(KC_F5);
-        tap_code16(KC_F5);
-        tap_code16(KC_F5);
+        tap_code16(KC_F7);
+        tap_code16(KC_F7);
+        tap_code16(KC_F7);
     }
     if(state->count > 3) {
-        tap_code16(KC_F5);
+        tap_code16(KC_F7);
     }
 }
 
 void dance_72_finished(tap_dance_state_t *state, void *user_data) {
     dance_state[72].step = dance_step(state);
     switch (dance_state[72].step) {
-        case SINGLE_TAP: register_code16(KC_F5); break;
-        case DOUBLE_TAP: register_code16(KC_WWW_REFRESH); break;
-        case DOUBLE_SINGLE_TAP: tap_code16(KC_F5); register_code16(KC_F5);
+        case SINGLE_TAP: register_code16(KC_F7); break;
+        case DOUBLE_TAP: register_code16(KC_WWW_SEARCH); break;
+        case DOUBLE_SINGLE_TAP: tap_code16(KC_F7); register_code16(KC_F7);
     }
 }
 
 void dance_72_reset(tap_dance_state_t *state, void *user_data) {
     wait_ms(10);
     switch (dance_state[72].step) {
-        case SINGLE_TAP: unregister_code16(KC_F5); break;
-        case DOUBLE_TAP: unregister_code16(KC_WWW_REFRESH); break;
-        case DOUBLE_SINGLE_TAP: unregister_code16(KC_F5); break;
+        case SINGLE_TAP: unregister_code16(KC_F7); break;
+        case DOUBLE_TAP: unregister_code16(KC_WWW_SEARCH); break;
+        case DOUBLE_SINGLE_TAP: unregister_code16(KC_F7); break;
     }
     dance_state[72].step = 0;
 }
@@ -2852,30 +2849,32 @@ void dance_73_reset(tap_dance_state_t *state, void *user_data);
 
 void on_dance_73(tap_dance_state_t *state, void *user_data) {
     if(state->count == 3) {
-        tap_code16(KC_F7);
-        tap_code16(KC_F7);
-        tap_code16(KC_F7);
+        tap_code16(KC_MEDIA_PREV_TRACK);
+        tap_code16(KC_MEDIA_PREV_TRACK);
+        tap_code16(KC_MEDIA_PREV_TRACK);
     }
     if(state->count > 3) {
-        tap_code16(KC_F7);
+        tap_code16(KC_MEDIA_PREV_TRACK);
     }
 }
 
 void dance_73_finished(tap_dance_state_t *state, void *user_data) {
     dance_state[73].step = dance_step(state);
     switch (dance_state[73].step) {
-        case SINGLE_TAP: register_code16(KC_F7); break;
-        case DOUBLE_TAP: register_code16(KC_WWW_SEARCH); break;
-        case DOUBLE_SINGLE_TAP: tap_code16(KC_F7); register_code16(KC_F7);
+        case SINGLE_TAP: register_code16(KC_MEDIA_PREV_TRACK); break;
+        case SINGLE_HOLD: register_code16(KC_MEDIA_REWIND); break;
+        case DOUBLE_TAP: register_code16(KC_MEDIA_PREV_TRACK); register_code16(KC_MEDIA_PREV_TRACK); break;
+        case DOUBLE_SINGLE_TAP: tap_code16(KC_MEDIA_PREV_TRACK); register_code16(KC_MEDIA_PREV_TRACK);
     }
 }
 
 void dance_73_reset(tap_dance_state_t *state, void *user_data) {
     wait_ms(10);
     switch (dance_state[73].step) {
-        case SINGLE_TAP: unregister_code16(KC_F7); break;
-        case DOUBLE_TAP: unregister_code16(KC_WWW_SEARCH); break;
-        case DOUBLE_SINGLE_TAP: unregister_code16(KC_F7); break;
+        case SINGLE_TAP: unregister_code16(KC_MEDIA_PREV_TRACK); break;
+        case SINGLE_HOLD: unregister_code16(KC_MEDIA_REWIND); break;
+        case DOUBLE_TAP: unregister_code16(KC_MEDIA_PREV_TRACK); break;
+        case DOUBLE_SINGLE_TAP: unregister_code16(KC_MEDIA_PREV_TRACK); break;
     }
     dance_state[73].step = 0;
 }
@@ -2885,32 +2884,32 @@ void dance_74_reset(tap_dance_state_t *state, void *user_data);
 
 void on_dance_74(tap_dance_state_t *state, void *user_data) {
     if(state->count == 3) {
-        tap_code16(KC_MEDIA_PREV_TRACK);
-        tap_code16(KC_MEDIA_PREV_TRACK);
-        tap_code16(KC_MEDIA_PREV_TRACK);
+        tap_code16(KC_MEDIA_PLAY_PAUSE);
+        tap_code16(KC_MEDIA_PLAY_PAUSE);
+        tap_code16(KC_MEDIA_PLAY_PAUSE);
     }
     if(state->count > 3) {
-        tap_code16(KC_MEDIA_PREV_TRACK);
+        tap_code16(KC_MEDIA_PLAY_PAUSE);
     }
 }
 
 void dance_74_finished(tap_dance_state_t *state, void *user_data) {
     dance_state[74].step = dance_step(state);
     switch (dance_state[74].step) {
-        case SINGLE_TAP: register_code16(KC_MEDIA_PREV_TRACK); break;
-        case SINGLE_HOLD: register_code16(KC_MEDIA_REWIND); break;
-        case DOUBLE_TAP: register_code16(KC_MEDIA_PREV_TRACK); register_code16(KC_MEDIA_PREV_TRACK); break;
-        case DOUBLE_SINGLE_TAP: tap_code16(KC_MEDIA_PREV_TRACK); register_code16(KC_MEDIA_PREV_TRACK);
+        case SINGLE_TAP: register_code16(KC_MEDIA_PLAY_PAUSE); break;
+        case SINGLE_HOLD: register_code16(KC_MEDIA_STOP); break;
+        case DOUBLE_TAP: register_code16(KC_MEDIA_PLAY_PAUSE); register_code16(KC_MEDIA_PLAY_PAUSE); break;
+        case DOUBLE_SINGLE_TAP: tap_code16(KC_MEDIA_PLAY_PAUSE); register_code16(KC_MEDIA_PLAY_PAUSE);
     }
 }
 
 void dance_74_reset(tap_dance_state_t *state, void *user_data) {
     wait_ms(10);
     switch (dance_state[74].step) {
-        case SINGLE_TAP: unregister_code16(KC_MEDIA_PREV_TRACK); break;
-        case SINGLE_HOLD: unregister_code16(KC_MEDIA_REWIND); break;
-        case DOUBLE_TAP: unregister_code16(KC_MEDIA_PREV_TRACK); break;
-        case DOUBLE_SINGLE_TAP: unregister_code16(KC_MEDIA_PREV_TRACK); break;
+        case SINGLE_TAP: unregister_code16(KC_MEDIA_PLAY_PAUSE); break;
+        case SINGLE_HOLD: unregister_code16(KC_MEDIA_STOP); break;
+        case DOUBLE_TAP: unregister_code16(KC_MEDIA_PLAY_PAUSE); break;
+        case DOUBLE_SINGLE_TAP: unregister_code16(KC_MEDIA_PLAY_PAUSE); break;
     }
     dance_state[74].step = 0;
 }
@@ -2920,32 +2919,32 @@ void dance_75_reset(tap_dance_state_t *state, void *user_data);
 
 void on_dance_75(tap_dance_state_t *state, void *user_data) {
     if(state->count == 3) {
-        tap_code16(KC_MEDIA_PLAY_PAUSE);
-        tap_code16(KC_MEDIA_PLAY_PAUSE);
-        tap_code16(KC_MEDIA_PLAY_PAUSE);
+        tap_code16(KC_MEDIA_NEXT_TRACK);
+        tap_code16(KC_MEDIA_NEXT_TRACK);
+        tap_code16(KC_MEDIA_NEXT_TRACK);
     }
     if(state->count > 3) {
-        tap_code16(KC_MEDIA_PLAY_PAUSE);
+        tap_code16(KC_MEDIA_NEXT_TRACK);
     }
 }
 
 void dance_75_finished(tap_dance_state_t *state, void *user_data) {
     dance_state[75].step = dance_step(state);
     switch (dance_state[75].step) {
-        case SINGLE_TAP: register_code16(KC_MEDIA_PLAY_PAUSE); break;
-        case SINGLE_HOLD: register_code16(KC_MEDIA_STOP); break;
-        case DOUBLE_TAP: register_code16(KC_MEDIA_PLAY_PAUSE); register_code16(KC_MEDIA_PLAY_PAUSE); break;
-        case DOUBLE_SINGLE_TAP: tap_code16(KC_MEDIA_PLAY_PAUSE); register_code16(KC_MEDIA_PLAY_PAUSE);
+        case SINGLE_TAP: register_code16(KC_MEDIA_NEXT_TRACK); break;
+        case SINGLE_HOLD: register_code16(KC_MEDIA_FAST_FORWARD); break;
+        case DOUBLE_TAP: register_code16(KC_MEDIA_NEXT_TRACK); register_code16(KC_MEDIA_NEXT_TRACK); break;
+        case DOUBLE_SINGLE_TAP: tap_code16(KC_MEDIA_NEXT_TRACK); register_code16(KC_MEDIA_NEXT_TRACK);
     }
 }
 
 void dance_75_reset(tap_dance_state_t *state, void *user_data) {
     wait_ms(10);
     switch (dance_state[75].step) {
-        case SINGLE_TAP: unregister_code16(KC_MEDIA_PLAY_PAUSE); break;
-        case SINGLE_HOLD: unregister_code16(KC_MEDIA_STOP); break;
-        case DOUBLE_TAP: unregister_code16(KC_MEDIA_PLAY_PAUSE); break;
-        case DOUBLE_SINGLE_TAP: unregister_code16(KC_MEDIA_PLAY_PAUSE); break;
+        case SINGLE_TAP: unregister_code16(KC_MEDIA_NEXT_TRACK); break;
+        case SINGLE_HOLD: unregister_code16(KC_MEDIA_FAST_FORWARD); break;
+        case DOUBLE_TAP: unregister_code16(KC_MEDIA_NEXT_TRACK); break;
+        case DOUBLE_SINGLE_TAP: unregister_code16(KC_MEDIA_NEXT_TRACK); break;
     }
     dance_state[75].step = 0;
 }
@@ -2955,32 +2954,32 @@ void dance_76_reset(tap_dance_state_t *state, void *user_data);
 
 void on_dance_76(tap_dance_state_t *state, void *user_data) {
     if(state->count == 3) {
-        tap_code16(KC_MEDIA_NEXT_TRACK);
-        tap_code16(KC_MEDIA_NEXT_TRACK);
-        tap_code16(KC_MEDIA_NEXT_TRACK);
+        tap_code16(KC_WWW_HOME);
+        tap_code16(KC_WWW_HOME);
+        tap_code16(KC_WWW_HOME);
     }
     if(state->count > 3) {
-        tap_code16(KC_MEDIA_NEXT_TRACK);
+        tap_code16(KC_WWW_HOME);
     }
 }
 
 void dance_76_finished(tap_dance_state_t *state, void *user_data) {
     dance_state[76].step = dance_step(state);
     switch (dance_state[76].step) {
-        case SINGLE_TAP: register_code16(KC_MEDIA_NEXT_TRACK); break;
-        case SINGLE_HOLD: register_code16(KC_MEDIA_FAST_FORWARD); break;
-        case DOUBLE_TAP: register_code16(KC_MEDIA_NEXT_TRACK); register_code16(KC_MEDIA_NEXT_TRACK); break;
-        case DOUBLE_SINGLE_TAP: tap_code16(KC_MEDIA_NEXT_TRACK); register_code16(KC_MEDIA_NEXT_TRACK);
+        case SINGLE_TAP: register_code16(KC_WWW_HOME); break;
+        case SINGLE_HOLD: register_code16(KC_CALCULATOR); break;
+        case DOUBLE_TAP: register_code16(KC_WWW_HOME); register_code16(KC_WWW_HOME); break;
+        case DOUBLE_SINGLE_TAP: tap_code16(KC_WWW_HOME); register_code16(KC_WWW_HOME);
     }
 }
 
 void dance_76_reset(tap_dance_state_t *state, void *user_data) {
     wait_ms(10);
     switch (dance_state[76].step) {
-        case SINGLE_TAP: unregister_code16(KC_MEDIA_NEXT_TRACK); break;
-        case SINGLE_HOLD: unregister_code16(KC_MEDIA_FAST_FORWARD); break;
-        case DOUBLE_TAP: unregister_code16(KC_MEDIA_NEXT_TRACK); break;
-        case DOUBLE_SINGLE_TAP: unregister_code16(KC_MEDIA_NEXT_TRACK); break;
+        case SINGLE_TAP: unregister_code16(KC_WWW_HOME); break;
+        case SINGLE_HOLD: unregister_code16(KC_CALCULATOR); break;
+        case DOUBLE_TAP: unregister_code16(KC_WWW_HOME); break;
+        case DOUBLE_SINGLE_TAP: unregister_code16(KC_WWW_HOME); break;
     }
     dance_state[76].step = 0;
 }
@@ -2990,53 +2989,18 @@ void dance_77_reset(tap_dance_state_t *state, void *user_data);
 
 void on_dance_77(tap_dance_state_t *state, void *user_data) {
     if(state->count == 3) {
-        tap_code16(KC_WWW_HOME);
-        tap_code16(KC_WWW_HOME);
-        tap_code16(KC_WWW_HOME);
+        tap_code16(KC_MAIL);
+        tap_code16(KC_MAIL);
+        tap_code16(KC_MAIL);
     }
     if(state->count > 3) {
-        tap_code16(KC_WWW_HOME);
+        tap_code16(KC_MAIL);
     }
 }
 
 void dance_77_finished(tap_dance_state_t *state, void *user_data) {
     dance_state[77].step = dance_step(state);
     switch (dance_state[77].step) {
-        case SINGLE_TAP: register_code16(KC_WWW_HOME); break;
-        case SINGLE_HOLD: register_code16(KC_CALCULATOR); break;
-        case DOUBLE_TAP: register_code16(KC_WWW_HOME); register_code16(KC_WWW_HOME); break;
-        case DOUBLE_SINGLE_TAP: tap_code16(KC_WWW_HOME); register_code16(KC_WWW_HOME);
-    }
-}
-
-void dance_77_reset(tap_dance_state_t *state, void *user_data) {
-    wait_ms(10);
-    switch (dance_state[77].step) {
-        case SINGLE_TAP: unregister_code16(KC_WWW_HOME); break;
-        case SINGLE_HOLD: unregister_code16(KC_CALCULATOR); break;
-        case DOUBLE_TAP: unregister_code16(KC_WWW_HOME); break;
-        case DOUBLE_SINGLE_TAP: unregister_code16(KC_WWW_HOME); break;
-    }
-    dance_state[77].step = 0;
-}
-void on_dance_78(tap_dance_state_t *state, void *user_data);
-void dance_78_finished(tap_dance_state_t *state, void *user_data);
-void dance_78_reset(tap_dance_state_t *state, void *user_data);
-
-void on_dance_78(tap_dance_state_t *state, void *user_data) {
-    if(state->count == 3) {
-        tap_code16(KC_MAIL);
-        tap_code16(KC_MAIL);
-        tap_code16(KC_MAIL);
-    }
-    if(state->count > 3) {
-        tap_code16(KC_MAIL);
-    }
-}
-
-void dance_78_finished(tap_dance_state_t *state, void *user_data) {
-    dance_state[78].step = dance_step(state);
-    switch (dance_state[78].step) {
         case SINGLE_TAP: register_code16(KC_MAIL); break;
         case SINGLE_HOLD: register_code16(KC_MY_COMPUTER); break;
         case DOUBLE_TAP: register_code16(KC_MAIL); register_code16(KC_MAIL); break;
@@ -3044,15 +3008,15 @@ void dance_78_finished(tap_dance_state_t *state, void *user_data) {
     }
 }
 
-void dance_78_reset(tap_dance_state_t *state, void *user_data) {
+void dance_77_reset(tap_dance_state_t *state, void *user_data) {
     wait_ms(10);
-    switch (dance_state[78].step) {
+    switch (dance_state[77].step) {
         case SINGLE_TAP: unregister_code16(KC_MAIL); break;
         case SINGLE_HOLD: unregister_code16(KC_MY_COMPUTER); break;
         case DOUBLE_TAP: unregister_code16(KC_MAIL); break;
         case DOUBLE_SINGLE_TAP: unregister_code16(KC_MAIL); break;
     }
-    dance_state[78].step = 0;
+    dance_state[77].step = 0;
 }
 
 tap_dance_action_t tap_dance_actions[] = {
@@ -3119,10 +3083,10 @@ tap_dance_action_t tap_dance_actions[] = {
         [DANCE_60] = ACTION_TAP_DANCE_FN_ADVANCED(on_dance_60, dance_60_finished, dance_60_reset),
         [DANCE_61] = ACTION_TAP_DANCE_FN_ADVANCED(on_dance_61, dance_61_finished, dance_61_reset),
         [DANCE_62] = ACTION_TAP_DANCE_FN_ADVANCED(on_dance_62, dance_62_finished, dance_62_reset),
-        [DANCE_63] = ACTION_TAP_DANCE_FN_ADVANCED(on_dance_63, dance_63_finished, dance_63_reset),
+        [DANCE_63] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, dance_63_finished, dance_63_reset),
         [DANCE_64] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, dance_64_finished, dance_64_reset),
         [DANCE_65] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, dance_65_finished, dance_65_reset),
-        [DANCE_66] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, dance_66_finished, dance_66_reset),
+        [DANCE_66] = ACTION_TAP_DANCE_FN_ADVANCED(on_dance_66, dance_66_finished, dance_66_reset),
         [DANCE_67] = ACTION_TAP_DANCE_FN_ADVANCED(on_dance_67, dance_67_finished, dance_67_reset),
         [DANCE_68] = ACTION_TAP_DANCE_FN_ADVANCED(on_dance_68, dance_68_finished, dance_68_reset),
         [DANCE_69] = ACTION_TAP_DANCE_FN_ADVANCED(on_dance_69, dance_69_finished, dance_69_reset),
@@ -3134,7 +3098,6 @@ tap_dance_action_t tap_dance_actions[] = {
         [DANCE_75] = ACTION_TAP_DANCE_FN_ADVANCED(on_dance_75, dance_75_finished, dance_75_reset),
         [DANCE_76] = ACTION_TAP_DANCE_FN_ADVANCED(on_dance_76, dance_76_finished, dance_76_reset),
         [DANCE_77] = ACTION_TAP_DANCE_FN_ADVANCED(on_dance_77, dance_77_finished, dance_77_reset),
-        [DANCE_78] = ACTION_TAP_DANCE_FN_ADVANCED(on_dance_78, dance_78_finished, dance_78_reset),
 };
 
 /* Vince specific code */
