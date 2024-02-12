@@ -3620,6 +3620,14 @@ layer_state_t layer_state_set_kb(layer_state_t state) {
             LED_2 = true;
             break;
         case 9:
+            break;
+        case 10:
+            LED_5 = true;
+            break;
+        case 11:
+            LED_2 = true;
+            break;
+        case 12:
             LED_1 = true;
             break;
         default:
