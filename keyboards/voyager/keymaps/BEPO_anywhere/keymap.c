@@ -921,7 +921,7 @@ void dance_11_finished(tap_dance_state_t *state, void *user_data) {
     dance_state[11].step = dance_step(state);
     switch (dance_state[11].step) {
         case SINGLE_TAP: register_code16(KC_F6); break;
-        case DOUBLE_TAP: register_code16(KC_MAIL); break;
+        case DOUBLE_TAP: register_code16(KC_CALCULATOR); break;
         case DOUBLE_SINGLE_TAP: tap_code16(KC_F6); register_code16(KC_F6);
     }
 }
@@ -930,7 +930,7 @@ void dance_11_reset(tap_dance_state_t *state, void *user_data) {
     wait_ms(10);
     switch (dance_state[11].step) {
         case SINGLE_TAP: unregister_code16(KC_F6); break;
-        case DOUBLE_TAP: unregister_code16(KC_MAIL); break;
+        case DOUBLE_TAP: unregister_code16(KC_CALCULATOR); break;
         case DOUBLE_SINGLE_TAP: unregister_code16(KC_F6); break;
     }
     dance_state[11].step = 0;
@@ -1496,7 +1496,7 @@ void dance_28_finished(tap_dance_state_t *state, void *user_data) {
     dance_state[28].step = dance_step(state);
     switch (dance_state[28].step) {
         case SINGLE_TAP: register_code16(KC_F6); break;
-        case DOUBLE_TAP: register_code16(KC_MAIL); break;
+        case DOUBLE_TAP: register_code16(KC_CALCULATOR); break;
         case DOUBLE_SINGLE_TAP: tap_code16(KC_F6); register_code16(KC_F6);
     }
 }
@@ -1505,7 +1505,7 @@ void dance_28_reset(tap_dance_state_t *state, void *user_data) {
     wait_ms(10);
     switch (dance_state[28].step) {
         case SINGLE_TAP: unregister_code16(KC_F6); break;
-        case DOUBLE_TAP: unregister_code16(KC_MAIL); break;
+        case DOUBLE_TAP: unregister_code16(KC_CALCULATOR); break;
         case DOUBLE_SINGLE_TAP: unregister_code16(KC_F6); break;
     }
     dance_state[28].step = 0;
@@ -2071,7 +2071,7 @@ void dance_45_finished(tap_dance_state_t *state, void *user_data) {
     dance_state[45].step = dance_step(state);
     switch (dance_state[45].step) {
         case SINGLE_TAP: register_code16(KC_F6); break;
-        case DOUBLE_TAP: register_code16(KC_MAIL); break;
+        case DOUBLE_TAP: register_code16(KC_CALCULATOR); break;
         case DOUBLE_SINGLE_TAP: tap_code16(KC_F6); register_code16(KC_F6);
     }
 }
@@ -2080,7 +2080,7 @@ void dance_45_reset(tap_dance_state_t *state, void *user_data) {
     wait_ms(10);
     switch (dance_state[45].step) {
         case SINGLE_TAP: unregister_code16(KC_F6); break;
-        case DOUBLE_TAP: unregister_code16(KC_MAIL); break;
+        case DOUBLE_TAP: unregister_code16(KC_CALCULATOR); break;
         case DOUBLE_SINGLE_TAP: unregister_code16(KC_F6); break;
     }
     dance_state[45].step = 0;
@@ -2646,7 +2646,7 @@ void dance_62_finished(tap_dance_state_t *state, void *user_data) {
     dance_state[62].step = dance_step(state);
     switch (dance_state[62].step) {
         case SINGLE_TAP: register_code16(KC_F6); break;
-        case DOUBLE_TAP: register_code16(KC_MAIL); break;
+        case DOUBLE_TAP: register_code16(KC_CALCULATOR); break;
         case DOUBLE_SINGLE_TAP: tap_code16(KC_F6); register_code16(KC_F6);
     }
 }
@@ -2655,7 +2655,7 @@ void dance_62_reset(tap_dance_state_t *state, void *user_data) {
     wait_ms(10);
     switch (dance_state[62].step) {
         case SINGLE_TAP: unregister_code16(KC_F6); break;
-        case DOUBLE_TAP: unregister_code16(KC_MAIL); break;
+        case DOUBLE_TAP: unregister_code16(KC_CALCULATOR); break;
         case DOUBLE_SINGLE_TAP: unregister_code16(KC_F6); break;
     }
     dance_state[62].step = 0;
@@ -2679,7 +2679,7 @@ void dance_63_finished(tap_dance_state_t *state, void *user_data) {
     dance_state[63].step = dance_step(state);
     switch (dance_state[63].step) {
         case SINGLE_TAP: register_code16(KC_F4); break;
-        case DOUBLE_TAP: register_code16(KC_MAIL); break;
+        case DOUBLE_TAP: register_code16(KC_WWW_SEARCH); break;
         case DOUBLE_SINGLE_TAP: tap_code16(KC_F4); register_code16(KC_F4);
     }
 }
@@ -2688,7 +2688,7 @@ void dance_63_reset(tap_dance_state_t *state, void *user_data) {
     wait_ms(10);
     switch (dance_state[63].step) {
         case SINGLE_TAP: unregister_code16(KC_F4); break;
-        case DOUBLE_TAP: unregister_code16(KC_MAIL); break;
+        case DOUBLE_TAP: unregister_code16(KC_WWW_SEARCH); break;
         case DOUBLE_SINGLE_TAP: unregister_code16(KC_F4); break;
     }
     dance_state[63].step = 0;
@@ -3568,6 +3568,164 @@ tap_dance_action_t tap_dance_actions[] = {
         [DANCE_87] = ACTION_TAP_DANCE_FN_ADVANCED(on_dance_87, dance_87_finished, dance_87_reset),
         [DANCE_88] = ACTION_TAP_DANCE_FN_ADVANCED(on_dance_88, dance_88_finished, dance_88_reset),
 };
+
+/* Vince specific code */
+
+bool caps_word_press_user(uint16_t keycode) {
+   switch (biton32(layer_state)) {
+      case 0:           // BEPO
+      case 1:
+      case 2:
+         switch (keycode) {
+            // Keycodes that continue Caps Word, with shift applied.
+            case BP_A:
+            case BP_B:
+            case BP_C:
+            case BP_D:
+            case BP_E:
+            case BP_F:
+            case BP_G:
+            case BP_H:
+            case BP_I:
+            case BP_J:
+            case BP_K:
+            case BP_L:
+            case BP_M:
+            case BP_N:
+            case BP_O:
+            case BP_P:
+            case BP_Q:
+            case BP_R:
+            case BP_S:
+            case BP_T:
+            case BP_U:
+            case BP_V:
+            case BP_W:
+            case BP_X:
+            case BP_Y:
+            case BP_Z:
+            case BP_ECUT:
+            case BP_EGRV:
+            case BP_AGRV:
+            case BP_CCED:
+            case BP_UGRV:
+               add_weak_mods(MOD_BIT(KC_LSFT));  // Apply shift to next key.
+               return true;
+
+            // Keycodes that continue Caps Word, without shifting.
+            case BP_1 ... BP_0:
+            case KC_KP_1 ... KC_KP_0:
+            case KC_KP_MINUS:
+            case KC_BSPC:
+            case KC_DELETE:
+            case BP_UNDS:
+            case BP_MINS:
+            case BP_DCRC:
+            case BP_DTRM:
+               return true;
+
+            default: return false;  // Deactivate Caps Word.
+         }
+      case 3:           // QWERTY
+      case 4:
+      case 5:
+      case 9:           // QWERTY mac
+      case 10:
+      case 11:
+         switch (keycode) {
+            // Keycodes that continue Caps Word, with shift applied.
+            case KC_A ... KC_Z:
+               add_weak_mods(MOD_BIT(KC_LSFT));  // Apply shift to next key.
+               return true;
+
+            // Keycodes that continue Caps Word, without shifting.
+            case KC_1 ... KC_0:
+            case KC_KP_1 ... KC_KP_0:
+            case KC_KP_MINUS:
+            case KC_BSPC:
+            case KC_DELETE:
+            case KC_UNDS:
+            case KC_MINS:
+            case KC_CIRC:
+            case KC_DQUO:
+            case KC_QUOTE:
+            case KC_GRAVE:
+               return true;
+
+            default: return false;  // Deactivate Caps Word.
+         }
+      case 6:           // AZERTY
+      case 7:
+      case 8:
+         switch (keycode) {
+            // Keycodes that continue Caps Word, with shift applied.
+            case FR_A:
+            case KC_B:
+            case KC_C:
+            case KC_D:
+            case KC_E:
+            case KC_F:
+            case KC_G:
+            case KC_H:
+            case KC_I:
+            case KC_J:
+            case KC_K:
+            case KC_L:
+            case FR_M:
+            case KC_N:
+            case KC_O:
+            case KC_P:
+            case FR_Q:
+            case KC_R:
+            case KC_S:
+            case KC_T:
+            case KC_U:
+            case KC_V:
+            case FR_W:
+            case KC_X:
+            case KC_Y:
+            case FR_Z:
+               add_weak_mods(MOD_BIT(KC_LSFT));  // Apply shift to next key.
+               return true;
+
+            // Keycodes that continue Caps Word, without shifting.
+            case FR_1 ... FR_0:
+            case KC_KP_1 ... KC_KP_0:
+            case KC_KP_MINUS:
+            case KC_BSPC:
+            case KC_DELETE:
+            case FR_UNDS:
+            case FR_MINS:
+               return true;
+
+            default:
+               return false;  // Deactivate Caps Word.
+         }
+      case 12:           // Keyboard
+         switch (keycode) {
+            // Keycodes that continue Caps Word, without shifting.
+            case KC_KP_1 ... KC_KP_0:
+            case KC_KP_MINUS:
+            case KC_BSPC:
+            case KC_DELETE:
+               return true;
+
+            default: return false;  // Deactivate Caps Word.
+         }
+      default: return false;
+   }
+
+   return false;
+}
+
+bool led_update_kb(led_t led_state) {
+    bool res = led_update_user(led_state);
+    if (res) {
+        STATUS_LED_2(led_state.num_lock);
+        STATUS_LED_4(led_state.caps_lock);
+    }
+    return res;
+}
 
 extern bool is_launching;
 
