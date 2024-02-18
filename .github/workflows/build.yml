@@ -17,17 +17,11 @@ jobs:
       fail-fast: false
       matrix:
         keyboard:
-          - ergodox_ez
-          - ergodox_ez/shine
-          - ergodox_ez/glow
           - moonlander
-          - planck/ez
-          - planck/ez/glow
           - voyager
-          - voyager/gd32
         keymap:
           - default
-          - oryx
+          - BEPO_anywhere
 
     steps:
     - name: Checkout QMK Firmware
