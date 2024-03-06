@@ -134,93 +134,93 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_voyager(
     KC_ESCAPE,      BP_B,           BP_ECUT,        BP_P,           BP_O,           BP_EGRV,                                        BP_V,           BP_D,           BP_L,           BP_J,           BP_Z,           KC_UP,          
     KC_TAB,         BP_A,           BP_U,           BP_I,           BP_E,           TD(DANCE_0),                                    BP_T,           BP_S,           BP_R,           BP_N,           BP_M,           KC_DOWN,        
-    OSM(MOD_LSFT),  BP_AGRV,        BP_Y,           BP_X,           TD(DANCE_1),    KC_BSPC,                                        TD(DANCE_6),    BP_G,           BP_H,           BP_F,           BP_W,           OSM(MOD_RSFT),  
-    TD(DANCE_2),    TD(DANCE_3),    TD(DANCE_4),    TT(2),          BP_C,           BP_CCED,                                        BP_K,           KC_SPACE,           TT(1),          KC_LEFT,        KC_RIGHT,       OSM(MOD_RGUI),  
-                                                    KC_ENTER,       TD(DANCE_5),                                    TD(DANCE_7),    BP_Q
+    OSM(MOD_LSFT),  BP_AGRV,        BP_Y,           BP_X,           TD(DANCE_1),    KC_BSPC,                                        TD(DANCE_6),    BP_G,           BP_H,           BP_F,           BP_Q,           OSM(MOD_RSFT),  
+    TD(DANCE_2),    TD(DANCE_3),    TD(DANCE_4),    OSL(2),         BP_C,           BP_CCED,                                        BP_K,           KC_SPACE,       OSL(1),         KC_LEFT,        KC_RIGHT,       OSM(MOD_RGUI),  
+                                                    KC_ENTER,       TD(DANCE_5),                                    TD(DANCE_7),    BP_W
   ),
   [1] = LAYOUT_voyager(
     TO(12),         BP_PIPE,        BP_AMPR,        BP_MINS,        BP_ASTR,        TD(DANCE_8),                                    TD(DANCE_9),    BP_SLSH,        BP_PLUS,        BP_HASH,        BP_BSLS,        KC_TRANSPARENT, 
     KC_TRANSPARENT, BP_6,           BP_4,           BP_8,           BP_0,           BP_2,                                           BP_3,           BP_1,           BP_9,           BP_5,           BP_7,           KC_TRANSPARENT, 
     KC_TRANSPARENT, BP_UNDS,        BP_LBRC,        BP_LPRN,        BP_EQL,         KC_TRANSPARENT,                                 KC_TRANSPARENT, BP_PERC,        BP_RPRN,        BP_RBRC,        BP_EXLM,        CW_TOGG,        
-    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, BP_DCRC,        BP_LESS,                                        TD(DANCE_10),   KC_TRANSPARENT,         KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
+    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, BP_DCRC,        BP_LESS,                                        TD(DANCE_10),   KC_TRANSPARENT, QK_LLCK,        KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
                                                     BP_GRTR,        KC_ENTER,                                       KC_TRANSPARENT, BP_DLR
   ),
   [2] = LAYOUT_voyager(
     KC_DELETE,      TD(DANCE_11),   TD(DANCE_12),   TD(DANCE_13),   TD(DANCE_14),   TD(DANCE_15),                                   TD(DANCE_17),   TD(DANCE_18),   TD(DANCE_19),   TD(DANCE_20),   TD(DANCE_21),   KC_TRANSPARENT, 
     KC_TRANSPARENT, BP_AT,          BP_TILD,        RALT(BP_COMM),  BP_APOS,        BP_LGIL,                                        BP_RGIL,        BP_GRV,         BP_DQOT,        BP_DTRM,        TD(DANCE_22),   KC_TRANSPARENT, 
     KC_CAPS,        BP_QEST,        BP_LCBR,        RALT(LSFT(BP_P)),RALT(BP_A),     KC_TRANSPARENT,                                 KC_TRANSPARENT, RALT(BP_O),     BP_MDSH,        BP_RCBR,        BP_UGRV,        OSM(MOD_RSFT),  
-    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, BP_DCRC,        RALT(BP_2),                                     RALT(BP_3),     KC_ESCAPE,         ST_MACRO_0,     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
+    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, QK_LLCK,        BP_DCRC,        RALT(BP_2),                                     RALT(BP_3),     KC_ESCAPE,      ST_MACRO_0,     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
                                                     KC_ENTER,       TD(DANCE_16),                                   KC_TRANSPARENT, BP_DLR
   ),
   [3] = LAYOUT_voyager(
     KC_TRANSPARENT, KC_B,           ST_MACRO_1,     KC_P,           KC_O,           ST_MACRO_2,                                     KC_V,           KC_D,           KC_L,           KC_J,           KC_Z,           KC_TRANSPARENT, 
     KC_TRANSPARENT, KC_A,           KC_U,           KC_I,           KC_E,           TD(DANCE_23),                                   KC_T,           KC_S,           KC_R,           KC_N,           KC_M,           KC_TRANSPARENT, 
-    KC_TRANSPARENT, ST_MACRO_3,     KC_Y,           KC_X,           TD(DANCE_24),   KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_G,           KC_H,           KC_F,           KC_W,           KC_TRANSPARENT, 
-    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, TT(5),          KC_C,           ST_MACRO_4,                                     KC_K,           KC_TRANSPARENT,           TT(4),          KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
-                                                    KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_Q
+    KC_TRANSPARENT, ST_MACRO_3,     KC_Y,           KC_X,           TD(DANCE_24),   KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_G,           KC_H,           KC_F,           KC_Q,           KC_TRANSPARENT, 
+    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, OSL(5),         KC_C,           ST_MACRO_4,                                     KC_K,           KC_TRANSPARENT, OSL(4),         KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
+                                                    KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_W
   ),
   [4] = LAYOUT_voyager(
     TO(12),         KC_PIPE,        KC_AMPR,        KC_MINUS,       KC_ASTR,        TD(DANCE_25),                                   TD(DANCE_26),   KC_SLASH,       KC_PLUS,        KC_HASH,        KC_BSLS,        KC_TRANSPARENT, 
     KC_TRANSPARENT, KC_6,           KC_4,           KC_8,           KC_0,           KC_2,                                           KC_3,           KC_1,           KC_9,           KC_5,           KC_7,           KC_TRANSPARENT, 
     KC_TRANSPARENT, KC_UNDS,        KC_LBRC,        KC_LPRN,        KC_EQUAL,       KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_PERC,        KC_RPRN,        KC_RBRC,        KC_EXLM,        CW_TOGG,        
-    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_CIRC,        KC_LABK,                                        TD(DANCE_27),   KC_TRANSPARENT,         KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
+    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_CIRC,        KC_LABK,                                        TD(DANCE_27),   KC_TRANSPARENT, QK_LLCK,        KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
                                                     KC_RABK,        KC_ENTER,                                       KC_TRANSPARENT, KC_DLR
   ),
   [5] = LAYOUT_voyager(
     KC_DELETE,      TD(DANCE_28),   TD(DANCE_29),   TD(DANCE_30),   TD(DANCE_31),   TD(DANCE_32),                                   TD(DANCE_34),   TD(DANCE_35),   TD(DANCE_36),   TD(DANCE_37),   TD(DANCE_38),   KC_TRANSPARENT, 
     KC_TRANSPARENT, KC_AT,          KC_TILD,        ST_MACRO_5,     KC_QUOTE,       RALT(KC_LBRC),                                  RALT(KC_RBRC),  ST_MACRO_7,     ST_MACRO_8,     KC_DQUO,        TD(DANCE_39),   KC_TRANSPARENT, 
     KC_CAPS,        KC_QUES,        KC_LCBR,        RALT(LSFT(KC_S)),RALT(KC_Z),     KC_TRANSPARENT,                                 KC_TRANSPARENT, RALT(KC_X),     ST_MACRO_9,     KC_RCBR,        ST_MACRO_10,    OSM(MOD_RSFT),  
-    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_CIRC,        ST_MACRO_6,                                     ST_MACRO_11,    KC_ESCAPE,         RALT(KC_M),     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
+    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, QK_LLCK,        KC_CIRC,        ST_MACRO_6,                                     ST_MACRO_11,    KC_ESCAPE,      RALT(KC_M),     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
                                                     KC_ENTER,       TD(DANCE_33),                                   KC_TRANSPARENT, KC_DLR
   ),
   [6] = LAYOUT_voyager(
     KC_TRANSPARENT, KC_B,           FR_EACU,        KC_P,           KC_O,           FR_EGRV,                                        KC_V,           KC_D,           KC_L,           KC_J,           FR_Z,           KC_TRANSPARENT, 
     KC_TRANSPARENT, FR_A,           KC_U,           KC_I,           KC_E,           TD(DANCE_40),                                   KC_T,           KC_S,           KC_R,           KC_N,           FR_M,           KC_TRANSPARENT, 
-    KC_TRANSPARENT, FR_AGRV,        KC_Y,           KC_X,           TD(DANCE_41),   KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_G,           KC_H,           KC_F,           FR_W,           KC_TRANSPARENT, 
-    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, TT(8),          KC_C,           FR_CCED,                                        KC_K,           KC_TRANSPARENT,           TT(7),          KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
-                                                    KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, FR_Q
+    KC_TRANSPARENT, FR_AGRV,        KC_Y,           KC_X,           TD(DANCE_41),   KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_G,           KC_H,           KC_F,           FR_Q,           KC_TRANSPARENT, 
+    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, OSL(8),         KC_C,           FR_CCED,                                        KC_K,           KC_TRANSPARENT, OSL(7),         KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
+                                                    KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, FR_W
   ),
   [7] = LAYOUT_voyager(
     TO(12),         FR_PIPE,        FR_AMP,         FR_MINS,        FR_ASTR,        TD(DANCE_42),                                   TD(DANCE_43),   FR_SLSH,        FR_PLUS,        FR_HASH,        FR_BSLS,        KC_TRANSPARENT, 
     KC_TRANSPARENT, FR_6,           FR_4,           FR_8,           FR_0,           FR_2,                                           FR_3,           FR_1,           FR_9,           FR_5,           FR_7,           KC_TRANSPARENT, 
     KC_TRANSPARENT, FR_UNDS,        FR_LBRC,        FR_LPRN,        FR_EQL,         KC_TRANSPARENT,                                 KC_TRANSPARENT, FR_PERC,        FR_RPRN,        FR_RBRC,        FR_EXLM,        CW_TOGG,        
-    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, FR_CCIRC,       FR_LESS,                                        TD(DANCE_44),   KC_TRANSPARENT,         KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
+    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, FR_CCIRC,       FR_LESS,                                        TD(DANCE_44),   KC_TRANSPARENT, QK_LLCK,        KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
                                                     FR_GRTR,        KC_ENTER,                                       KC_TRANSPARENT, FR_DLR
   ),
   [8] = LAYOUT_voyager(
     KC_DELETE,      TD(DANCE_45),   TD(DANCE_46),   TD(DANCE_47),   TD(DANCE_48),   TD(DANCE_49),                                   TD(DANCE_51),   TD(DANCE_52),   TD(DANCE_53),   TD(DANCE_54),   TD(DANCE_55),   KC_TRANSPARENT, 
     KC_TRANSPARENT, FR_AT,          FR_TILD,        FR_APOS,        FR_SUP2,        ST_MACRO_12,                                    ST_MACRO_15,    ST_MACRO_16,    FR_DQUO,        FR_UMLT,        TD(DANCE_56),   KC_TRANSPARENT, 
     KC_CAPS,        FR_QUES,        FR_LCBR,        FR_SECT,        ST_MACRO_13,    KC_TRANSPARENT,                                 KC_TRANSPARENT, ST_MACRO_17,    ST_MACRO_18,    FR_RCBR,        FR_UGRV,        OSM(MOD_RSFT),  
-    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, FR_CCIRC,       ST_MACRO_14,                                    ST_MACRO_19,    KC_ESCAPE,         FR_MU,          KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
+    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, QK_LLCK,        FR_CCIRC,       ST_MACRO_14,                                    ST_MACRO_19,    KC_ESCAPE,      FR_MU,          KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
                                                     KC_ENTER,       TD(DANCE_50),                                   KC_TRANSPARENT, FR_DLR
   ),
   [9] = LAYOUT_voyager(
     KC_TRANSPARENT, KC_B,           ST_MACRO_20,    KC_P,           KC_O,           ST_MACRO_21,                                    KC_V,           KC_D,           KC_L,           KC_J,           KC_Z,           KC_TRANSPARENT, 
     KC_TRANSPARENT, KC_A,           KC_U,           KC_I,           KC_E,           TD(DANCE_57),                                   KC_T,           KC_S,           KC_R,           KC_N,           KC_M,           KC_TRANSPARENT, 
-    KC_TRANSPARENT, ST_MACRO_22,    KC_Y,           KC_X,           TD(DANCE_58),   KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_G,           KC_H,           KC_F,           KC_W,           KC_TRANSPARENT, 
-    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, TT(11),         KC_C,           ST_MACRO_23,                                    KC_K,           KC_TRANSPARENT,           TT(10),         KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
-                                                    KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_Q
+    KC_TRANSPARENT, ST_MACRO_22,    KC_Y,           KC_X,           TD(DANCE_58),   KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_G,           KC_H,           KC_F,           KC_Q,           KC_TRANSPARENT, 
+    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, OSL(11),        KC_C,           ST_MACRO_23,                                    KC_K,           KC_TRANSPARENT, OSL(10),        KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
+                                                    KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_W
   ),
   [10] = LAYOUT_voyager(
     TO(12),         KC_PIPE,        KC_AMPR,        KC_MINUS,       KC_ASTR,        TD(DANCE_59),                                   TD(DANCE_60),   KC_SLASH,       KC_PLUS,        KC_HASH,        KC_BSLS,        KC_TRANSPARENT, 
     KC_TRANSPARENT, KC_6,           KC_4,           KC_8,           KC_0,           KC_2,                                           KC_3,           KC_1,           KC_9,           KC_5,           KC_7,           KC_TRANSPARENT, 
     KC_TRANSPARENT, KC_UNDS,        KC_LBRC,        KC_LPRN,        KC_EQUAL,       KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_PERC,        KC_RPRN,        KC_RBRC,        KC_EXLM,        CW_TOGG,        
-    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_CIRC,        KC_LABK,                                        TD(DANCE_61),   KC_TRANSPARENT,         KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
+    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_CIRC,        KC_LABK,                                        TD(DANCE_61),   KC_TRANSPARENT, QK_LLCK,        KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
                                                     KC_RABK,        KC_ENTER,                                       KC_TRANSPARENT, KC_DLR
   ),
   [11] = LAYOUT_voyager(
     KC_DELETE,      TD(DANCE_62),   TD(DANCE_63),   TD(DANCE_64),   TD(DANCE_65),   TD(DANCE_66),                                   TD(DANCE_68),   TD(DANCE_69),   TD(DANCE_70),   TD(DANCE_71),   TD(DANCE_72),   KC_TRANSPARENT, 
     KC_TRANSPARENT, KC_AT,          ST_MACRO_24,    ST_MACRO_25,    KC_QUOTE,       RALT(KC_BSLS),                                  RALT(RSFT(KC_BSLS)),ST_MACRO_26,    ST_MACRO_27,    KC_DQUO,        TD(DANCE_73),   KC_TRANSPARENT, 
     KC_CAPS,        KC_QUES,        KC_LCBR,        RALT(KC_6),     RALT(KC_QUOTE), KC_TRANSPARENT,                                 KC_TRANSPARENT, RALT(KC_Q),     RALT(RSFT(KC_MINUS)),KC_RCBR,        ST_MACRO_28,    OSM(MOD_RSFT),  
-    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_CIRC,        RALT(KC_LBRC),                                  RALT(RSFT(KC_LBRC)),KC_ESCAPE,         RALT(KC_M),     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
+    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, QK_LLCK,        KC_CIRC,        RALT(KC_LBRC),                                  RALT(RSFT(KC_LBRC)),KC_ESCAPE,      RALT(KC_M),     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
                                                     KC_ENTER,       TD(DANCE_67),                                   KC_TRANSPARENT, KC_DLR
   ),
   [12] = LAYOUT_voyager(
     KC_TRANSPARENT, TD(DANCE_74),   TD(DANCE_75),   TD(DANCE_76),   TD(DANCE_77),   TD(DANCE_78),                                   TD(DANCE_79),   TD(DANCE_80),   TD(DANCE_81),   TD(DANCE_82),   TD(DANCE_83),   KC_MS_UP,       
     KC_TRANSPARENT, KC_KP_6,        KC_KP_4,        KC_KP_8,        KC_KP_0,        KC_KP_2,                                        KC_KP_3,        KC_KP_1,        KC_KP_9,        KC_KP_5,        KC_KP_7,        KC_MS_DOWN,     
     KC_LEFT_SHIFT,  KC_MS_BTN1,     KC_MS_BTN3,     KC_MS_BTN2,     KC_KP_DOT,      KC_TRANSPARENT,                                 KC_TRANSPARENT, TD(DANCE_84),   TD(DANCE_85),   TD(DANCE_86),   KC_KP_COMMA,    KC_NUM,         
-    KC_TRANSPARENT, KC_MS_WH_LEFT,  KC_MS_WH_RIGHT, RGB_TOG,        TOGGLE_LAYER_COLOR,KC_MS_WH_UP,                                    KC_MS_WH_DOWN,  KC_TRANSPARENT,   TD(DANCE_88),   KC_MS_LEFT,     KC_MS_RIGHT,    KC_TRANSPARENT, 
-                                                    KC_KP_ENTER,    KC_TRANSPARENT,                                 KC_TRANSPARENT, TD(DANCE_87)
+    KC_TRANSPARENT, KC_MS_WH_LEFT,  KC_MS_WH_RIGHT, RGB_TOG,        TOGGLE_LAYER_COLOR,KC_MS_WH_UP,                                    KC_MS_WH_DOWN,  KC_TRANSPARENT, TD(DANCE_87),   KC_MS_LEFT,     KC_MS_RIGHT,    KC_TRANSPARENT, 
+                                                    KC_KP_ENTER,    KC_TRANSPARENT,                                 KC_TRANSPARENT, TD(DANCE_88)
   ),
 };
 
@@ -3412,32 +3412,32 @@ void dance_87_reset(tap_dance_state_t *state, void *user_data);
 
 void on_dance_87(tap_dance_state_t *state, void *user_data) {
     if(state->count == 3) {
-        tap_code16(KC_WWW_HOME);
-        tap_code16(KC_WWW_HOME);
-        tap_code16(KC_WWW_HOME);
+        tap_code16(KC_MAIL);
+        tap_code16(KC_MAIL);
+        tap_code16(KC_MAIL);
     }
     if(state->count > 3) {
-        tap_code16(KC_WWW_HOME);
+        tap_code16(KC_MAIL);
     }
 }
 
 void dance_87_finished(tap_dance_state_t *state, void *user_data) {
     dance_state[87].step = dance_step(state);
     switch (dance_state[87].step) {
-        case SINGLE_TAP: register_code16(KC_WWW_HOME); break;
-        case SINGLE_HOLD: register_code16(KC_CALCULATOR); break;
-        case DOUBLE_TAP: register_code16(KC_WWW_HOME); register_code16(KC_WWW_HOME); break;
-        case DOUBLE_SINGLE_TAP: tap_code16(KC_WWW_HOME); register_code16(KC_WWW_HOME);
+        case SINGLE_TAP: register_code16(KC_MAIL); break;
+        case SINGLE_HOLD: register_code16(KC_MY_COMPUTER); break;
+        case DOUBLE_TAP: register_code16(KC_MAIL); register_code16(KC_MAIL); break;
+        case DOUBLE_SINGLE_TAP: tap_code16(KC_MAIL); register_code16(KC_MAIL);
     }
 }
 
 void dance_87_reset(tap_dance_state_t *state, void *user_data) {
     wait_ms(10);
     switch (dance_state[87].step) {
-        case SINGLE_TAP: unregister_code16(KC_WWW_HOME); break;
-        case SINGLE_HOLD: unregister_code16(KC_CALCULATOR); break;
-        case DOUBLE_TAP: unregister_code16(KC_WWW_HOME); break;
-        case DOUBLE_SINGLE_TAP: unregister_code16(KC_WWW_HOME); break;
+        case SINGLE_TAP: unregister_code16(KC_MAIL); break;
+        case SINGLE_HOLD: unregister_code16(KC_MY_COMPUTER); break;
+        case DOUBLE_TAP: unregister_code16(KC_MAIL); break;
+        case DOUBLE_SINGLE_TAP: unregister_code16(KC_MAIL); break;
     }
     dance_state[87].step = 0;
 }
@@ -3447,32 +3447,32 @@ void dance_88_reset(tap_dance_state_t *state, void *user_data);
 
 void on_dance_88(tap_dance_state_t *state, void *user_data) {
     if(state->count == 3) {
-        tap_code16(KC_MAIL);
-        tap_code16(KC_MAIL);
-        tap_code16(KC_MAIL);
+        tap_code16(KC_WWW_HOME);
+        tap_code16(KC_WWW_HOME);
+        tap_code16(KC_WWW_HOME);
     }
     if(state->count > 3) {
-        tap_code16(KC_MAIL);
+        tap_code16(KC_WWW_HOME);
     }
 }
 
 void dance_88_finished(tap_dance_state_t *state, void *user_data) {
     dance_state[88].step = dance_step(state);
     switch (dance_state[88].step) {
-        case SINGLE_TAP: register_code16(KC_MAIL); break;
-        case SINGLE_HOLD: register_code16(KC_MY_COMPUTER); break;
-        case DOUBLE_TAP: register_code16(KC_MAIL); register_code16(KC_MAIL); break;
-        case DOUBLE_SINGLE_TAP: tap_code16(KC_MAIL); register_code16(KC_MAIL);
+        case SINGLE_TAP: register_code16(KC_WWW_HOME); break;
+        case SINGLE_HOLD: register_code16(KC_CALCULATOR); break;
+        case DOUBLE_TAP: register_code16(KC_WWW_HOME); register_code16(KC_WWW_HOME); break;
+        case DOUBLE_SINGLE_TAP: tap_code16(KC_WWW_HOME); register_code16(KC_WWW_HOME);
     }
 }
 
 void dance_88_reset(tap_dance_state_t *state, void *user_data) {
     wait_ms(10);
     switch (dance_state[88].step) {
-        case SINGLE_TAP: unregister_code16(KC_MAIL); break;
-        case SINGLE_HOLD: unregister_code16(KC_MY_COMPUTER); break;
-        case DOUBLE_TAP: unregister_code16(KC_MAIL); break;
-        case DOUBLE_SINGLE_TAP: unregister_code16(KC_MAIL); break;
+        case SINGLE_TAP: unregister_code16(KC_WWW_HOME); break;
+        case SINGLE_HOLD: unregister_code16(KC_CALCULATOR); break;
+        case DOUBLE_TAP: unregister_code16(KC_WWW_HOME); break;
+        case DOUBLE_SINGLE_TAP: unregister_code16(KC_WWW_HOME); break;
     }
     dance_state[88].step = 0;
 }
