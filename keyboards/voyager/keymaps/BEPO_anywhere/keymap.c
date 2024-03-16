@@ -3618,6 +3618,7 @@ bool caps_word_press_user(uint16_t keycode) {
             case KC_KP_MINUS:
             case KC_BSPC:
             case KC_DELETE:
+            case QK_LLCK:
             case BP_UNDS:
             case BP_MINS:
             case BP_DCRC:
@@ -3644,6 +3645,7 @@ bool caps_word_press_user(uint16_t keycode) {
             case KC_KP_MINUS:
             case KC_BSPC:
             case KC_DELETE:
+            case QK_LLCK:
             case KC_UNDS:
             case KC_MINS:
             case KC_CIRC:
@@ -3694,6 +3696,7 @@ bool caps_word_press_user(uint16_t keycode) {
             case KC_KP_MINUS:
             case KC_BSPC:
             case KC_DELETE:
+            case QK_LLCK:
             case FR_UNDS:
             case FR_MINS:
                return true;
@@ -3708,6 +3711,7 @@ bool caps_word_press_user(uint16_t keycode) {
             case KC_KP_MINUS:
             case KC_BSPC:
             case KC_DELETE:
+            case QK_LLCK:
                return true;
 
             default: return false;  // Deactivate Caps Word.
