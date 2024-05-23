@@ -321,6 +321,8 @@ bool rgb_matrix_indicators_user(void) {
 }
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+  uint8_t mods_used;
+
   switch (keycode) {
     case ST_MACRO_0:
     if (record->event.pressed) {
@@ -331,6 +333,13 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     if (record->event.pressed) {
       if (is_caps_word_on()) {
          SEND_STRING(SS_TAP(X_QUOTE) SS_DELAY(100) SS_LSFT(SS_TAP(X_E)));
+      } else if ((mods_used = get_mods()) & MOD_MASK_SHIFT) {
+         del_mods(MOD_MASK_SHIFT);
+         SEND_STRING(SS_TAP(X_QUOTE) SS_DELAY(100) SS_LSFT(SS_TAP(X_E)));
+         set_mods(mods_used);
+      } else if (get_oneshot_mods() & MOD_MASK_SHIFT) {
+         del_oneshot_mods(MOD_MASK_SHIFT);
+         SEND_STRING(SS_TAP(X_QUOTE) SS_DELAY(100) SS_LSFT(SS_TAP(X_E)));
       } else {
          SEND_STRING(SS_TAP(X_QUOTE) SS_DELAY(100) SS_TAP(X_E));
       }
@@ -339,6 +348,13 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case ST_MACRO_2:
     if (record->event.pressed) {
       if (is_caps_word_on()) {
+         SEND_STRING(SS_TAP(X_GRAVE) SS_DELAY(100) SS_LSFT(SS_TAP(X_E)));
+      } else if ((mods_used = get_mods()) & MOD_MASK_SHIFT) {
+         del_mods(MOD_MASK_SHIFT);
+         SEND_STRING(SS_TAP(X_GRAVE) SS_DELAY(100) SS_LSFT(SS_TAP(X_E)));
+         set_mods(mods_used);
+      } else if (get_oneshot_mods() & MOD_MASK_SHIFT) {
+         del_oneshot_mods(MOD_MASK_SHIFT);
          SEND_STRING(SS_TAP(X_GRAVE) SS_DELAY(100) SS_LSFT(SS_TAP(X_E)));
       } else {
          SEND_STRING(SS_TAP(X_GRAVE) SS_DELAY(100) SS_TAP(X_E));
@@ -349,6 +365,13 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     if (record->event.pressed) {
       if (is_caps_word_on()) {
          SEND_STRING(SS_TAP(X_GRAVE) SS_DELAY(100) SS_LSFT(SS_TAP(X_A)));
+      } else if ((mods_used = get_mods()) & MOD_MASK_SHIFT) {
+         del_mods(MOD_MASK_SHIFT);
+         SEND_STRING(SS_TAP(X_GRAVE) SS_DELAY(100) SS_LSFT(SS_TAP(X_A)));
+         set_mods(mods_used);
+      } else if (get_oneshot_mods() & MOD_MASK_SHIFT) {
+         del_oneshot_mods(MOD_MASK_SHIFT);
+         SEND_STRING(SS_TAP(X_GRAVE) SS_DELAY(100) SS_LSFT(SS_TAP(X_A)));
       } else {
          SEND_STRING(SS_TAP(X_GRAVE) SS_DELAY(100) SS_TAP(X_A));
       }
@@ -357,6 +380,13 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case ST_MACRO_4:
     if (record->event.pressed) {
       if (is_caps_word_on()) {
+         SEND_STRING(SS_TAP(X_QUOTE) SS_DELAY(100) SS_LSFT(SS_TAP(X_C)));
+      } else if ((mods_used = get_mods()) & MOD_MASK_SHIFT) {
+         del_mods(MOD_MASK_SHIFT);
+         SEND_STRING(SS_TAP(X_QUOTE) SS_DELAY(100) SS_LSFT(SS_TAP(X_C)));
+         set_mods(mods_used);
+      } else if (get_oneshot_mods() & MOD_MASK_SHIFT) {
+         del_oneshot_mods(MOD_MASK_SHIFT);
          SEND_STRING(SS_TAP(X_QUOTE) SS_DELAY(100) SS_LSFT(SS_TAP(X_C)));
       } else {
          SEND_STRING(SS_TAP(X_QUOTE) SS_DELAY(100) SS_TAP(X_C));
@@ -396,6 +426,13 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case ST_MACRO_11:
     if (record->event.pressed) {
       if (is_caps_word_on()) {
+         SEND_STRING(SS_TAP(X_GRAVE) SS_DELAY(100) SS_LSFT(SS_TAP(X_U)));
+      } else if ((mods_used = get_mods()) & MOD_MASK_SHIFT) {
+         del_mods(MOD_MASK_SHIFT);
+         SEND_STRING(SS_TAP(X_GRAVE) SS_DELAY(100) SS_LSFT(SS_TAP(X_U)));
+         set_mods(mods_used);
+      } else if (get_oneshot_mods() & MOD_MASK_SHIFT) {
+         del_oneshot_mods(MOD_MASK_SHIFT);
          SEND_STRING(SS_TAP(X_GRAVE) SS_DELAY(100) SS_LSFT(SS_TAP(X_U)));
       } else {
          SEND_STRING(SS_TAP(X_GRAVE) SS_DELAY(100) SS_TAP(X_U));
