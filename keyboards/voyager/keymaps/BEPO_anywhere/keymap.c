@@ -26,15 +26,6 @@ enum custom_keycodes {
   ST_MACRO_18,
   ST_MACRO_19,
   ST_MACRO_20,
-  ST_MACRO_21,
-  ST_MACRO_22,
-  ST_MACRO_23,
-  ST_MACRO_24,
-  ST_MACRO_25,
-  ST_MACRO_26,
-  ST_MACRO_27,
-  ST_MACRO_28,
-  ST_MACRO_29,
 };
 
 
@@ -196,10 +187,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                     KC_ENTER,       TD(DANCE_50),                                   KC_TRANSPARENT, FR_DLR
   ),
   [9] = LAYOUT_voyager(
-    KC_TRANSPARENT, KC_B,           ST_MACRO_21,    KC_P,           KC_O,           ST_MACRO_22,                                    KC_V,           KC_D,           KC_L,           KC_J,           KC_Z,           KC_TRANSPARENT, 
+    KC_TRANSPARENT, KC_B,           ST_MACRO_1,    KC_P,           KC_O,           ST_MACRO_2,                                    KC_V,           KC_D,           KC_L,           KC_J,           KC_Z,           KC_TRANSPARENT, 
     KC_TRANSPARENT, KC_A,           KC_U,           KC_I,           KC_E,           TD(DANCE_57),                                   KC_T,           KC_S,           KC_R,           KC_N,           KC_M,           KC_TRANSPARENT, 
-    KC_TRANSPARENT, ST_MACRO_23,    KC_Y,           KC_X,           TD(DANCE_58),   KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_G,           KC_H,           KC_F,           KC_Q,           KC_TRANSPARENT, 
-    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, OSL(11),        KC_C,           ST_MACRO_24,                                    KC_K,           KC_TRANSPARENT, OSL(10),        KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
+    KC_TRANSPARENT, ST_MACRO_3,    KC_Y,           KC_X,           TD(DANCE_58),   KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_G,           KC_H,           KC_F,           KC_Q,           KC_TRANSPARENT, 
+    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, OSL(11),        KC_C,           ST_MACRO_4,                                    KC_K,           KC_TRANSPARENT, OSL(10),        KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
                                                     KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_W
   ),
   [10] = LAYOUT_voyager(
@@ -211,8 +202,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
   [11] = LAYOUT_voyager(
     KC_DELETE,      TD(DANCE_62),   TD(DANCE_63),   TD(DANCE_64),   TD(DANCE_65),   TD(DANCE_66),                                   TD(DANCE_68),   TD(DANCE_69),   TD(DANCE_70),   TD(DANCE_71),   TD(DANCE_72),   KC_TRANSPARENT, 
-    KC_TRANSPARENT, KC_AT,          ST_MACRO_25,    ST_MACRO_26,    KC_QUOTE,       RALT(KC_BSLS),                                  RALT(RSFT(KC_BSLS)),ST_MACRO_27,    ST_MACRO_28,    KC_DQUO,        TD(DANCE_73),   KC_TRANSPARENT, 
-    KC_CAPS,        KC_QUES,        KC_LCBR,        RALT(KC_6),     RALT(KC_QUOTE), KC_TRANSPARENT,                                 KC_TRANSPARENT, RALT(KC_Q),     RALT(RSFT(KC_MINUS)),KC_RCBR,        ST_MACRO_29,    OSM(MOD_RSFT),  
+    KC_TRANSPARENT, KC_AT,          ST_MACRO_5,    ST_MACRO_6,    KC_QUOTE,       RALT(KC_BSLS),                                  RALT(RSFT(KC_BSLS)),ST_MACRO_8,    ST_MACRO_9,    KC_DQUO,        TD(DANCE_73),   KC_TRANSPARENT, 
+    KC_CAPS,        KC_QUES,        KC_LCBR,        RALT(KC_6),     RALT(KC_QUOTE), KC_TRANSPARENT,                                 KC_TRANSPARENT, RALT(KC_Q),     RALT(RSFT(KC_MINUS)),KC_RCBR,        ST_MACRO_11,    OSM(MOD_RSFT),  
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, QK_LLCK,        KC_CIRC,        RALT(KC_LBRC),                                  RALT(RSFT(KC_LBRC)),KC_ESCAPE,      RALT(KC_M),     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
                                                     KC_ENTER,       TD(DANCE_67),                                   KC_TRANSPARENT, KC_DLR
   ),
@@ -338,22 +329,38 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     break;
     case ST_MACRO_1:
     if (record->event.pressed) {
-      SEND_STRING(SS_TAP(X_QUOTE) SS_DELAY(100) SS_TAP(X_E));
+      if (is_caps_word_on()) {
+         SEND_STRING(SS_TAP(X_QUOTE) SS_DELAY(100) SS_LSFT(SS_TAP(X_E)));
+      } else {
+         SEND_STRING(SS_TAP(X_QUOTE) SS_DELAY(100) SS_TAP(X_E));
+      }
     }
     break;
     case ST_MACRO_2:
     if (record->event.pressed) {
-      SEND_STRING(SS_TAP(X_GRAVE) SS_DELAY(100) SS_TAP(X_E));
+      if (is_caps_word_on()) {
+         SEND_STRING(SS_TAP(X_GRAVE) SS_DELAY(100) SS_LSFT(SS_TAP(X_E)));
+      } else {
+         SEND_STRING(SS_TAP(X_GRAVE) SS_DELAY(100) SS_TAP(X_E));
+      }
     }
     break;
     case ST_MACRO_3:
     if (record->event.pressed) {
-      SEND_STRING(SS_TAP(X_GRAVE) SS_DELAY(100) SS_TAP(X_A));
+      if (is_caps_word_on()) {
+         SEND_STRING(SS_TAP(X_GRAVE) SS_DELAY(100) SS_LSFT(SS_TAP(X_A)));
+      } else {
+         SEND_STRING(SS_TAP(X_GRAVE) SS_DELAY(100) SS_TAP(X_A));
+      }
     }
     break;
     case ST_MACRO_4:
     if (record->event.pressed) {
-      SEND_STRING(SS_TAP(X_QUOTE) SS_DELAY(100) SS_TAP(X_C));
+      if (is_caps_word_on()) {
+         SEND_STRING(SS_TAP(X_QUOTE) SS_DELAY(100) SS_LSFT(SS_TAP(X_C)));
+      } else {
+         SEND_STRING(SS_TAP(X_QUOTE) SS_DELAY(100) SS_TAP(X_C));
+      }
     }
     break;
     case ST_MACRO_5:
@@ -388,7 +395,11 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     break;
     case ST_MACRO_11:
     if (record->event.pressed) {
-      SEND_STRING(SS_TAP(X_GRAVE) SS_DELAY(100) SS_TAP(X_U));
+      if (is_caps_word_on()) {
+         SEND_STRING(SS_TAP(X_GRAVE) SS_DELAY(100) SS_LSFT(SS_TAP(X_U)));
+      } else {
+         SEND_STRING(SS_TAP(X_GRAVE) SS_DELAY(100) SS_TAP(X_U));
+      }
     }
     break;
     case ST_MACRO_12:
@@ -434,51 +445,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case ST_MACRO_20:
     if (record->event.pressed) {
       SEND_STRING(SS_LALT(SS_TAP(X_KP_8) SS_TAP(X_KP_2) SS_TAP(X_KP_2) SS_TAP(X_KP_1) ));
-    }
-    break;
-    case ST_MACRO_21:
-    if (record->event.pressed) {
-      SEND_STRING(SS_TAP(X_QUOTE) SS_DELAY(100) SS_TAP(X_E));
-    }
-    break;
-    case ST_MACRO_22:
-    if (record->event.pressed) {
-      SEND_STRING(SS_TAP(X_GRAVE) SS_DELAY(100) SS_TAP(X_E));
-    }
-    break;
-    case ST_MACRO_23:
-    if (record->event.pressed) {
-      SEND_STRING(SS_TAP(X_GRAVE) SS_DELAY(100) SS_TAP(X_A));
-    }
-    break;
-    case ST_MACRO_24:
-    if (record->event.pressed) {
-      SEND_STRING(SS_TAP(X_QUOTE) SS_DELAY(100) SS_TAP(X_C));
-    }
-    break;
-    case ST_MACRO_25:
-    if (record->event.pressed) {
-      SEND_STRING(SS_RSFT(SS_TAP(X_GRAVE)) SS_DELAY(100) SS_TAP(X_SPACE));
-    }
-    break;
-    case ST_MACRO_26:
-    if (record->event.pressed) {
-      SEND_STRING(SS_TAP(X_QUOTE) SS_DELAY(100) SS_TAP(X_SPACE));
-    }
-    break;
-    case ST_MACRO_27:
-    if (record->event.pressed) {
-      SEND_STRING(SS_TAP(X_GRAVE) SS_DELAY(100) SS_TAP(X_SPACE));
-    }
-    break;
-    case ST_MACRO_28:
-    if (record->event.pressed) {
-      SEND_STRING(SS_LSFT(SS_TAP(X_QUOTE)) SS_DELAY(100) SS_TAP(X_SPACE));
-    }
-    break;
-    case ST_MACRO_29:
-    if (record->event.pressed) {
-      SEND_STRING(SS_TAP(X_GRAVE) SS_DELAY(100) SS_TAP(X_U));
     }
     break;
 
@@ -3642,6 +3608,7 @@ bool caps_word_press_user(uint16_t keycode) {
          switch (keycode) {
             // Keycodes that continue Caps Word, with shift applied.
             case KC_UNDS:
+            case KC_DQUO:
             case KC_A ... KC_Z:
                add_weak_mods(MOD_BIT(KC_LSFT));  // Apply shift to next key.
                return true;
@@ -3655,9 +3622,13 @@ bool caps_word_press_user(uint16_t keycode) {
             case QK_LLCK:
             case KC_MINS:
             case KC_CIRC:
-            case KC_DQUO:
             case KC_QUOTE:
             case KC_GRAVE:
+            case ST_MACRO_1:
+            case ST_MACRO_2:
+            case ST_MACRO_3:
+            case ST_MACRO_4:
+            case ST_MACRO_11:
                return true;
 
             case KC_LCBR:
