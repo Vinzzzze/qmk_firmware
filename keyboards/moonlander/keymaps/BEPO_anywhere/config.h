@@ -72,3 +72,4 @@
 
 /* Use the leds to see the caps / num / scroll lock */
 #define MOONLANDER_USER_LEDS
+#define CAPS_WORD_IDLE_TIMEOUT 0
