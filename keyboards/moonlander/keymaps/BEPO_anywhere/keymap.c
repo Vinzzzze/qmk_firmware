@@ -3560,6 +3560,8 @@ bool caps_word_press_user(uint16_t keycode) {
 
             case KC_LCBR:
             case KC_RCBR:
+            case KC_LPRN:
+            case KC_RPRN:
                add_weak_mods(MOD_BIT(KC_LSFT));  // Apply shift to next key.
                return false;
 
