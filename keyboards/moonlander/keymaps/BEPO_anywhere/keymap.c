@@ -3558,6 +3558,8 @@ bool caps_word_press_user(uint16_t keycode) {
             case ST_MACRO_11:
                return true;
 
+            case KC_LBRC:
+            case KC_RBRC:
             case KC_LCBR:
             case KC_RCBR:
             case KC_LPRN:
