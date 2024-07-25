@@ -3558,13 +3558,12 @@ bool caps_word_press_user(uint16_t keycode) {
             case ST_MACRO_11:
                return true;
 
-            case KC_LBRC:
-            case KC_RBRC:
+            case KC_AT:
             case KC_LCBR:
             case KC_RCBR:
             case KC_LPRN:
             case KC_RPRN:
-               add_weak_mods(MOD_BIT(KC_LSFT));  // Apply shift to next key.
+               add_weak_mods(MOD_BIT(KC_RSFT));  // Apply shift to next key.
                return false;
 
             default: return false;  // Deactivate Caps Word.
