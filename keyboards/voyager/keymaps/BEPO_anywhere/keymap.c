@@ -3747,12 +3747,12 @@ bool caps_word_press_user(uint16_t keycode) {
 bool led_update_kb(led_t led_state) {
     bool res = led_update_user(led_state);
     if (res) {
-        STATUS_LED_1(led_state.num_lock);
-        STATUS_LED_3(led_state.caps_lock);
+        STATUS_LED_4(led_state.num_lock);
+        STATUS_LED_1(led_state.caps_lock);
     }
     return res;
 }
 
 void caps_word_set_user(bool active) {
-    STATUS_LED_4(active);
+    STATUS_LED_3(active);
 }
