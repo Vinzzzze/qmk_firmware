@@ -117,6 +117,10 @@ void keyboard_pre_init_kb(void) {
     keyboard_pre_init_user();
 }
 
+#if defined(MOONLANDER_USER_LEDS)
+layer_state_t layer_state_set_kb_userdefined(layer_state_t state);
+#endif
+
 layer_state_t layer_state_set_kb(layer_state_t state) {
 #if !defined(MOONLANDER_USER_LEDS)
     state = layer_state_set_user(state);
@@ -172,6 +176,9 @@ layer_state_t layer_state_set_kb(layer_state_t state) {
 #if !defined(CAPS_LOCK_STATUS)
     STATUS_LED_6(LED_6);
 #endif
+#else
+    state = layer_state_set_kb_userdefined(state);
+    if (is_launching || !keyboard_config.led_level) return state;
 #endif
 #ifdef ORYX_ENABLE
     layer_state_set_oryx(state);
