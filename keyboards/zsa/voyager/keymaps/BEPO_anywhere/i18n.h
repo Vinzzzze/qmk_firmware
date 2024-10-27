@@ -9,6 +9,7 @@
 #define BP_8 S(KC_8)
 #define BP_9 S(KC_9)
 #define BP_A KC_A
+#define BP_AE ALGR(KC_A)
 #define BP_AGRV KC_Z
 #define BP_AMPR ALGR(KC_E)
 #define BP_APOS KC_N
@@ -53,6 +54,7 @@
 #define BP_MINS KC_8
 #define BP_N KC_SCLN
 #define BP_O KC_R
+#define BP_OE ALGR(KC_R)
 #define BP_P KC_E
 #define BP_PERC KC_EQL
 #define BP_PIPE ALGR(KC_Q)
