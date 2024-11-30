@@ -140,3 +140,4 @@
 #define FR_Z KC_W
 
 #define VM_USE_NUMPAD_ONLY
+#define VM_USE_LEFTPAD_ONLY

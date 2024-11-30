@@ -85,12 +85,14 @@ enum tap_dance_codes {
   DANCE_50,
   DANCE_51,
   DANCE_52,
+#ifdef VM_USE_LEFTPAD_ONLY
   DANCE_53,
   DANCE_54,
   DANCE_55,
   DANCE_56,
   DANCE_57,
   DANCE_58,
+#endif
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -201,6 +203,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TRANSPARENT, KC_MS_WH_LEFT,  KC_MS_WH_RIGHT, RGB_TOG,        TOGGLE_LAYER_COLOR,KC_MS_WH_UP,                                 KC_MS_WH_DOWN,  KC_TRANSPARENT, TD(DANCE_51),   KC_MS_LEFT,     KC_MS_RIGHT,    KC_TRANSPARENT,
                                                                                     KC_KP_ENTER,    KC_TRANSPARENT, KC_TRANSPARENT, TD(DANCE_52)
   ),
+#ifdef VM_USE_LEFTPAD_ONLY
   [13] = LAYOUT_voyager(
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,
@@ -251,6 +254,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     OSM(MOD_RGUI),  KC_LEFT,        KC_RIGHT,       TD(DANCE_58),   ST_MACRO_0,     RALT(BP_3),                                     KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,
                                                                                     BP_DLR,         TD(DANCE_7),    KC_NO,          KC_NO
   ),
+#endif
 };
 
 
@@ -287,7 +291,7 @@ const uint8_t PROGMEM ledmap[][RGB_MATRIX_LED_COUNT][3] = {
     [11] = { {0,0,255}, {19,245,255}, {19,245,255}, {19,245,255}, {19,245,255}, {19,245,255}, {86,237,170}, {86,237,170}, {86,237,170}, {86,237,170}, {86,237,170}, {86,237,170}, {206,255,160}, {86,237,170}, {86,237,170}, {86,237,170}, {86,237,170}, {225,224,255}, {0,245,245}, {46,215,244}, {46,215,244}, {0,0,255}, {86,237,170}, {86,237,170}, {225,224,255}, {19,245,255}, {19,245,255}, {19,245,255}, {19,245,255}, {19,245,255}, {19,245,255}, {46,215,244}, {86,237,170}, {86,237,170}, {86,237,170}, {86,237,170}, {86,237,170}, {46,215,244}, {0,245,245}, {86,237,170}, {86,237,170}, {86,237,170}, {86,237,170}, {0,245,245}, {86,237,170}, {86,237,170}, {86,237,170}, {46,215,244}, {46,215,244}, {0,245,245}, {19,245,255}, {86,237,170} },
 
     [12] = { {225,224,255}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {74,255,255}, {62,219,138}, {62,219,138}, {62,219,138}, {62,219,138}, {62,219,138}, {62,219,138}, {0,245,245}, {19,245,255}, {19,245,255}, {19,245,255}, {62,219,138}, {225,224,255}, {0,245,245}, {46,215,244}, {46,215,244}, {74,255,255}, {74,255,255}, {46,215,244}, {225,224,255}, {19,245,255}, {74,255,255}, {19,245,255}, {19,245,255}, {19,245,255}, {19,245,255}, {46,215,244}, {62,219,138}, {62,219,138}, {62,219,138}, {62,219,138}, {62,219,138}, {46,215,244}, {0,245,245}, {19,245,255}, {74,255,255}, {19,245,255}, {62,219,138}, {188,255,255}, {46,215,244}, {62,219,138}, {152,255,255}, {46,215,244}, {46,215,244}, {0,245,245}, {19,245,255}, {152,255,255} },
-
+#ifdef VM_USE_LEFTPAD_ONLY
     [13] = { {225,224,255}, {152,255,255}, {152,255,255}, {152,255,255}, {152,255,255}, {152,255,255}, {152,255,255}, {152,255,255}, {152,255,255}, {152,255,255}, {152,255,255}, {152,255,255}, {0,245,245}, {152,255,255}, {152,255,255}, {152,255,255}, {152,255,255}, {225,224,255}, {0,245,245}, {46,215,244}, {46,215,244}, {0,0,255}, {152,255,255}, {152,255,255}, {225,224,255}, {19,245,255}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0} },
 
     [14] = { {46,215,244}, {152,255,255}, {152,255,255}, {152,255,255}, {152,255,255}, {152,255,255}, {46,215,244}, {152,255,255}, {152,255,255}, {152,255,255}, {152,255,255}, {152,255,255}, {0,245,245}, {152,255,255}, {152,255,255}, {152,255,255}, {152,255,255}, {0,245,245}, {0,245,245}, {46,215,244}, {46,215,244}, {0,0,255}, {152,255,255}, {152,255,255}, {152,255,255}, {19,245,255}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0} },
@@ -299,6 +303,7 @@ const uint8_t PROGMEM ledmap[][RGB_MATRIX_LED_COUNT][3] = {
     [17] = { {0,0,255}, {19,245,255}, {19,245,255}, {19,245,255}, {19,245,255}, {19,245,255}, {86,95,255}, {86,95,255}, {86,95,255}, {86,95,255}, {86,95,255}, {86,95,255}, {206,255,160}, {86,95,255}, {86,95,255}, {86,95,255}, {86,95,255}, {225,224,255}, {0,245,245}, {46,215,244}, {46,215,244}, {0,0,255}, {86,95,255}, {86,95,255}, {225,224,255}, {19,245,255}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0} },
 
     [18] = { {46,215,244}, {19,245,255}, {19,245,255}, {19,245,255}, {19,245,255}, {19,245,255}, {46,215,244}, {86,95,255}, {86,95,255}, {86,95,255}, {86,95,255}, {86,95,255}, {0,245,245}, {86,95,255}, {86,95,255}, {86,95,255}, {86,95,255}, {0,245,245}, {0,245,245}, {46,215,244}, {46,215,244}, {0,0,255}, {86,95,255}, {86,95,255}, {86,95,255}, {19,245,255}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0} },
+#endif
 };
 
 void set_layer_color(int layer) {
@@ -363,6 +368,7 @@ bool rgb_matrix_indicators_user(void) {
     case 12:
       set_layer_color(12);
       break;
+#ifdef VM_USE_LEFTPAD_ONLY
     case 13:
       set_layer_color(13);
       break;
@@ -381,6 +387,7 @@ bool rgb_matrix_indicators_user(void) {
     case 18:
       set_layer_color(18);
       break;
+#endif
    default:
     if (rgb_matrix_get_flags() == LED_FLAG_NONE)
       rgb_matrix_set_color_all(0, 0, 0);
@@ -578,7 +585,11 @@ enum {
     MORE_TAPS
 };
 
+#ifdef VM_USE_LEFTPAD_ONLY
 static tap dance_state[60];
+#else
+static tap dance_state[54];
+#endif
 
 uint8_t dance_step(tap_dance_state_t *state);
 
@@ -720,7 +731,7 @@ void dance_3_finished(tap_dance_state_t *state, void *user_data) {
     switch (dance_state[3].step) {
         case SINGLE_TAP: register_code16(KC_PAGE_UP); break;
         case SINGLE_HOLD: register_code16(KC_HOME); break;
-        case DOUBLE_TAP: register_code16(KC_PAGE_UP); register_code16(KC_PAGE_UP); break;
+        case DOUBLE_TAP: unregister_code16(KC_MEDIA_PREV_TRACK); break;
         case DOUBLE_SINGLE_TAP: tap_code16(KC_PAGE_UP); register_code16(KC_PAGE_UP);
     }
 }
@@ -755,7 +766,7 @@ void dance_4_finished(tap_dance_state_t *state, void *user_data) {
     switch (dance_state[4].step) {
         case SINGLE_TAP: register_code16(KC_PGDN); break;
         case SINGLE_HOLD: register_code16(KC_END); break;
-        case DOUBLE_TAP: register_code16(KC_PGDN); register_code16(KC_PGDN); break;
+        case DOUBLE_TAP: register_code16(KC_MEDIA_NEXT_TRACK); break;
         case DOUBLE_SINGLE_TAP: tap_code16(KC_PGDN); register_code16(KC_PGDN);
     }
 }
@@ -2025,7 +2036,11 @@ void dance_41_finished(tap_dance_state_t *state, void *user_data) {
     dance_state[41].step = dance_step(state);
     switch (dance_state[41].step) {
         case SINGLE_TAP: layer_move(0); break;
+#ifdef VM_USE_LEFTPAD_ONLY
         case SINGLE_HOLD: layer_move(13); break;
+#else
+        case SINGLE_HOLD: layer_move(0); break;
+#endif
         case DOUBLE_TAP: register_code16(KC_F6); break;
         case DOUBLE_SINGLE_TAP: layer_move(0); break;
     }
@@ -2379,6 +2394,7 @@ void dance_52_reset(tap_dance_state_t *state, void *user_data) {
     }
     dance_state[52].step = 0;
 }
+#ifdef VM_USE_LEFTPAD_ONLY
 void dance_53_finished(tap_dance_state_t *state, void *user_data);
 void dance_53_reset(tap_dance_state_t *state, void *user_data);
 
@@ -2493,6 +2509,7 @@ void dance_58_reset(tap_dance_state_t *state, void *user_data) {
     }
     dance_state[58].step = 0;
 }
+#endif
 
 tap_dance_action_t tap_dance_actions[] = {
         [DANCE_0] = ACTION_TAP_DANCE_FN_ADVANCED(on_dance_0, dance_0_finished, dance_0_reset),
@@ -2548,12 +2565,14 @@ tap_dance_action_t tap_dance_actions[] = {
         [DANCE_50] = ACTION_TAP_DANCE_FN_ADVANCED(on_dance_50, dance_50_finished, dance_50_reset),
         [DANCE_51] = ACTION_TAP_DANCE_FN_ADVANCED(on_dance_51, dance_51_finished, dance_51_reset),
         [DANCE_52] = ACTION_TAP_DANCE_FN_ADVANCED(on_dance_52, dance_52_finished, dance_52_reset),
+#ifdef VM_USE_LEFTPAD_ONLY
         [DANCE_53] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, dance_53_finished, dance_53_reset),
         [DANCE_54] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, dance_54_finished, dance_54_reset),
         [DANCE_55] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, dance_55_finished, dance_55_reset),
         [DANCE_56] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, dance_56_finished, dance_56_reset),
         [DANCE_57] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, dance_57_finished, dance_57_reset),
         [DANCE_58] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, dance_58_finished, dance_58_reset),
+#endif
 };
 
 /* Vince specific code */
@@ -2748,6 +2767,7 @@ void caps_word_set_user(bool active) {
     STATUS_LED_3(active);
 }
 
+#ifdef VM_OVERRIDE_ENABLE
 /*
  * The overrided keys :
  * Shift + backspace : Stop
@@ -2794,3 +2814,4 @@ static const key_override_t* my_key_overrides[] = {
 };
 
 const key_override_t** key_overrides = my_key_overrides;
+#endif
