@@ -103,7 +103,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
   [1] = LAYOUT_voyager(
     KC_DELETE,      BP_PIPE,        BP_AMPR,        BP_MINS,        BP_ASTR,        TD(DANCE_8),                                    TD(DANCE_9),    BP_SLSH,        BP_PLUS,        BP_HASH,        BP_BSLS,        KC_TRANSPARENT,
+#ifndef VM_USE_NUMPAD_ONLY
     KC_TRANSPARENT, BP_6,           BP_4,           BP_8,           BP_0,           BP_2,                                           BP_3,           BP_1,           BP_9,           BP_5,           BP_7,           KC_TRANSPARENT,
+#else
+    KC_TRANSPARENT, KC_KP_6,        KC_KP_4,        KC_KP_8,        KC_KP_0,        KC_KP_2,                                        KC_KP_3,        KC_KP_1,        KC_KP_9,        KC_KP_5,        KC_KP_7,        KC_TRANSPARENT,
+#endif
     KC_TRANSPARENT, BP_UNDS,        BP_LBRC,        BP_LPRN,        BP_EQL,         KC_TRANSPARENT,                                 KC_ESCAPE,      BP_PERC,        BP_RPRN,        BP_RBRC,        BP_EXLM,        CW_TOGG,
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, BP_DCRC,        BP_LESS,                                        TD(DANCE_10),   KC_TRANSPARENT, QK_LLCK,        KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
                                                                                     BP_GRTR,        KC_ENTER,       KC_TRANSPARENT, BP_DLR
@@ -124,7 +128,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
   [4] = LAYOUT_voyager(
     KC_DELETE,      KC_PIPE,        KC_AMPR,        KC_MINUS,       KC_ASTR,        TD(DANCE_25),                                   TD(DANCE_26),   KC_SLASH,       KC_PLUS,        KC_HASH,        KC_BSLS,        KC_TRANSPARENT,
+#ifndef VM_USE_NUMPAD_ONLY
     KC_TRANSPARENT, KC_6,           KC_4,           KC_8,           KC_0,           KC_2,                                           KC_3,           KC_1,           KC_9,           KC_5,           KC_7,           KC_TRANSPARENT,
+#else
+    KC_TRANSPARENT, KC_KP_6,        KC_KP_4,        KC_KP_8,        KC_KP_0,        KC_KP_2,                                        KC_KP_3,        KC_KP_1,        KC_KP_9,        KC_KP_5,        KC_KP_7,        KC_TRANSPARENT,
+#endif
     KC_TRANSPARENT, KC_UNDS,        KC_LBRC,        KC_LPRN,        KC_EQUAL,       KC_TRANSPARENT,                                 KC_ESCAPE,      KC_PERC,        KC_RPRN,        KC_RBRC,        KC_EXLM,        CW_TOGG,
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_CIRC,        KC_LABK,                                        TD(DANCE_27),   KC_TRANSPARENT, QK_LLCK,        KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
                                                                                     KC_RABK,        KC_ENTER,       KC_TRANSPARENT, KC_DLR
@@ -145,7 +153,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
   [7] = LAYOUT_voyager(
     KC_DELETE,      FR_PIPE,        FR_AMP,         FR_MINS,        FR_ASTR,        TD(DANCE_31),                                   TD(DANCE_32),   FR_SLSH,        FR_PLUS,        FR_HASH,        FR_BSLS,        KC_TRANSPARENT,
+#ifndef VM_USE_NUMPAD_ONLY
     KC_TRANSPARENT, FR_6,           FR_4,           FR_8,           FR_0,           FR_2,                                           FR_3,           FR_1,           FR_9,           FR_5,           FR_7,           KC_TRANSPARENT,
+#else
+    KC_TRANSPARENT, KC_KP_6,        KC_KP_4,        KC_KP_8,        KC_KP_0,        KC_KP_2,                                        KC_KP_3,        KC_KP_1,        KC_KP_9,        KC_KP_5,        KC_KP_7,        KC_TRANSPARENT,
+#endif
     KC_TRANSPARENT, FR_UNDS,        FR_LBRC,        FR_LPRN,        FR_EQL,         KC_TRANSPARENT,                                 KC_ESCAPE,      FR_PERC,        FR_RPRN,        FR_RBRC,        FR_EXLM,        CW_TOGG,
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, FR_CCIRC,       FR_LESS,                                        TD(DANCE_33),   KC_TRANSPARENT, QK_LLCK,        KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
                                                                                     FR_GRTR,        KC_ENTER,       KC_TRANSPARENT, FR_DLR
@@ -166,7 +178,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
   [10] = LAYOUT_voyager(
     KC_DELETE,      KC_PIPE,        KC_AMPR,        KC_MINUS,       KC_ASTR,        TD(DANCE_37),                                   TD(DANCE_38),   KC_SLASH,       KC_PLUS,        KC_HASH,        KC_BSLS,        KC_TRANSPARENT,
+#ifndef VM_USE_NUMPAD_ONLY
     KC_TRANSPARENT, KC_6,           KC_4,           KC_8,           KC_0,           KC_2,                                           KC_3,           KC_1,           KC_9,           KC_5,           KC_7,           KC_TRANSPARENT,
+#else
+    KC_TRANSPARENT, KC_KP_6,        KC_KP_4,        KC_KP_8,        KC_KP_0,        KC_KP_2,                                        KC_KP_3,        KC_KP_1,        KC_KP_9,        KC_KP_5,        KC_KP_7,        KC_TRANSPARENT,
+#endif
     KC_TRANSPARENT, KC_UNDS,        KC_LBRC,        KC_LPRN,        KC_EQUAL,       KC_TRANSPARENT,                                 KC_ESCAPE,      KC_PERC,        KC_RPRN,        KC_RBRC,        KC_EXLM,        CW_TOGG,
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_CIRC,        KC_LABK,                                        TD(DANCE_39),   KC_TRANSPARENT, QK_LLCK,        KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
                                                                                     KC_RABK,        KC_ENTER,       KC_TRANSPARENT, KC_DLR
@@ -201,14 +217,22 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
   [15] = LAYOUT_voyager(
     KC_DELETE,      BP_PIPE,        BP_AMPR,        BP_MINS,        BP_ASTR,        TD(DANCE_8),                                    KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,
+#ifndef VM_USE_NUMPAD_ONLY
     KC_TAB,         BP_6,           BP_4,           BP_8,           BP_0,           BP_2,                                           KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,
+#else
+    KC_TRANSPARENT, KC_KP_6,        KC_KP_4,        KC_KP_8,        KC_KP_0,        KC_KP_2,                                        KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,
+#endif
     OSM(MOD_LSFT),  BP_UNDS,        BP_LBRC,        BP_LPRN,        BP_EQL,         KC_BSPC,                                        KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,
     TD(DANCE_2),    TD(DANCE_3),    TD(DANCE_4),    TD(DANCE_55),   BP_DCRC,        BP_LESS,                                        KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,
                                                                                     BP_GRTR,        KC_ENTER,       KC_NO,          KC_NO
   ),
   [16] = LAYOUT_voyager(
     KC_UP,          BP_BSLS,        BP_HASH,        BP_PLUS,        BP_SLSH,        TD(DANCE_9),                                    KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,
+#ifndef VM_USE_NUMPAD_ONLY
     KC_DOWN,        BP_7,           BP_5,           BP_9,           BP_1,           BP_3,                                           KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,
+#else
+    KC_DOWN,        KC_KP_7,        KC_KP_5,        KC_KP_9,        KC_KP_1,        KC_KP_3,                                        KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,
+#endif
     CW_TOGG,        BP_EXLM,        BP_RBRC,        BP_RPRN,        BP_PERC,        KC_ESCAPE,                                      KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,
     OSM(MOD_RGUI),  KC_LEFT,        KC_RIGHT,       TD(DANCE_56),   KC_SPACE,       TD(DANCE_10),                                   KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,
                                                                                     BP_DLR,         TD(DANCE_7),    KC_NO,          KC_NO
@@ -2534,6 +2558,7 @@ tap_dance_action_t tap_dance_actions[] = {
 
 /* Vince specific code */
 
+// Handle the caps word depending on the current layer
 bool caps_word_press_user(uint16_t keycode) {
    switch (biton32(layer_state)) {
       case 0:           // BEPO
@@ -2704,15 +2729,68 @@ bool caps_word_press_user(uint16_t keycode) {
    return false;
 }
 
+// Handle the caps lock and num lock leds
 bool led_update_kb(led_t led_state) {
     bool res = led_update_user(led_state);
     if (res) {
+#ifndef VM_USE_NUMPAD_ONLY
         STATUS_LED_4(led_state.num_lock);
+#else
+        STATUS_LED_4(!led_state.num_lock);
+#endif
         STATUS_LED_1(led_state.caps_lock);
     }
     return res;
 }
 
+// Handle the word lock led
 void caps_word_set_user(bool active) {
     STATUS_LED_3(active);
 }
+
+/*
+ * The overrided keys :
+ * Shift + backspace : Stop
+ * RAlt + Tab : Next
+ * RAlt + Shift + Tab : Prev
+ * RAlt + Esc : NumLock
+ * RAlt + Left : Mouse left
+ * RAlt + Up : Mouse Up
+ * RAlt + Right : Mouse Right
+ * RAlt + Down : Mouse Down
+ * RAlt + (Pgdown/End) : Wheel Down
+ * RAlt + (PgUp/Home) : Wheel Up
+ * LAlt + (Pgdown/End) : Wheel Right
+ * LAlt + (PgUp/Home) : Wheel Left
+*/
+static const key_override_t next_key_override             = ko_make_with_layers_negmods_and_options(MOD_BIT(KC_RIGHT_ALT), KC_TAB, KC_MEDIA_NEXT_TRACK, ~0, MOD_MASK_SHIFT, ko_option_no_reregister_trigger);
+static const key_override_t prev_key_override             = ko_make_basic(MOD_BIT(KC_RIGHT_ALT)|MOD_MASK_SHIFT, KC_TAB,              KC_MEDIA_PREV_TRACK);
+
+static const key_override_t backspace_key_override        = ko_make_basic(MOD_BIT(KC_RIGHT_ALT), KC_BSPC,      KC_MEDIA_STOP);
+static const key_override_t esc_key_override              = ko_make_basic(MOD_BIT(KC_RIGHT_ALT), KC_ESCAPE,    KC_NUM);
+static const key_override_t left_key_override             = ko_make_basic(MOD_BIT(KC_RIGHT_ALT), KC_LEFT,      KC_MS_LEFT);
+static const key_override_t up_key_override               = ko_make_basic(MOD_BIT(KC_RIGHT_ALT), KC_UP,        KC_MS_UP);
+static const key_override_t right_key_override            = ko_make_basic(MOD_BIT(KC_RIGHT_ALT), KC_RIGHT,     KC_MS_RIGHT);
+static const key_override_t down_key_override             = ko_make_basic(MOD_BIT(KC_RIGHT_ALT), KC_DOWN,      KC_MS_DOWN);
+static const key_override_t ralt_page_down_key_override   = ko_make_basic(MOD_BIT(KC_RIGHT_ALT), TD(DANCE_4),  KC_MS_WH_DOWN);
+static const key_override_t ralt_page_up_key_override     = ko_make_basic(MOD_BIT(KC_RIGHT_ALT), TD(DANCE_3),  KC_MS_WH_UP);
+static const key_override_t lalt_page_end_key_override    = ko_make_basic(MOD_BIT(KC_LEFT_ALT),  TD(DANCE_4),  KC_MS_WH_RIGHT);
+static const key_override_t lalt_page_home_key_override   = ko_make_basic(MOD_BIT(KC_LEFT_ALT),  TD(DANCE_3),  KC_MS_WH_LEFT);
+
+// The array of the key override definitions
+static const key_override_t* my_key_overrides[] = {
+   &backspace_key_override,
+   &next_key_override,
+   &prev_key_override,
+   &esc_key_override,
+   &left_key_override,
+   &up_key_override,
+   &right_key_override,
+   &down_key_override,
+   &ralt_page_down_key_override,
+   &ralt_page_up_key_override,
+   &lalt_page_end_key_override,
+   &lalt_page_home_key_override
+};
+
+const key_override_t** key_overrides = my_key_overrides;

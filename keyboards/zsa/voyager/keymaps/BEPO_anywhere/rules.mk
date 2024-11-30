@@ -8,3 +8,6 @@ TAP_DANCE_ENABLE = yes
 SPACE_CADET_ENABLE = no
 CAPS_WORD_ENABLE = yes
 LAYER_LOCK_ENABLE = yes
+
+# Vince add the key override function
+KEY_OVERRIDE_ENABLE = yes

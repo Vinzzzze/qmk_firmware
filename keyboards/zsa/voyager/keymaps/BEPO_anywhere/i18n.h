@@ -138,3 +138,5 @@
 #define FR_UNDS KC_8
 #define FR_W KC_Z
 #define FR_Z KC_W
+
+#define VM_USE_NUMPAD_ONLY
