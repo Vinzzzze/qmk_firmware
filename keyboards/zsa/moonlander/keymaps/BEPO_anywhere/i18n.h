@@ -94,7 +94,6 @@
 #define FR_AT ALGR(KC_0)
 #define FR_BSLS ALGR(KC_8)
 #define FR_CCED KC_9
-#define FR_CCIRC KC_LBRC
 #define FR_CIRC KC_LBRC
 #define FR_COLN KC_DOT
 #define FR_COMM KC_M
@@ -136,3 +135,5 @@
 #define FR_UNDS KC_8
 #define FR_W KC_Z
 #define FR_Z KC_W
+
+#define VM_USE_NUMPAD_ONLY
