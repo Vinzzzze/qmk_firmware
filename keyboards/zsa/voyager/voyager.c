@@ -108,9 +108,9 @@ void keyboard_pre_init_kb(void) {
     keyboard_pre_init_user();
 }
 
+#if !defined(VOYAGER_USER_LEDS)
 layer_state_t layer_state_set_kb(layer_state_t state) {
     state = layer_state_set_user(state);
-#if !defined(VOYAGER_USER_LEDS)
 #    ifdef COMMUNITY_MODULE_ORYX_ENABLE
     if (rawhid_state.status_led_control) {
         return state;
@@ -124,9 +124,9 @@ layer_state_t layer_state_set_kb(layer_state_t state) {
 #    if !defined(CAPS_LOCK_STATUS)
     STATUS_LED_4(layer & (1 << 3));
 #    endif
-#endif
     return state;
 }
+#endif
 
 #ifdef RGB_MATRIX_ENABLE
 // clang-format off

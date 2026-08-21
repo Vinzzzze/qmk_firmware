@@ -156,8 +156,8 @@ void keyboard_pre_init_kb(void) {
     keyboard_pre_init_user();
 }
 
-layer_state_t layer_state_set_kb(layer_state_t state) {
 #if !defined(MOONLANDER_USER_LEDS)
+layer_state_t layer_state_set_kb(layer_state_t state) {
     state = layer_state_set_user(state);
 #    ifdef COMMUNITY_MODULE_ORYX_ENABLE
     if (rawhid_state.status_led_control) {
@@ -213,10 +213,10 @@ layer_state_t layer_state_set_kb(layer_state_t state) {
 #    if !defined(CAPS_LOCK_STATUS)
     STATUS_LED_6(LED_6);
 #    endif
-#endif
 
     return state;
 }
+#endif
 
 #ifdef RGB_MATRIX_ENABLE
 // clang-format off
