@@ -211,25 +211,25 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
   [FUNCTION_LAYER] = LAYOUT_voyager(
 #ifdef AUTOMOUSE_LAYER
-    KC_ESCAPE,      TD(DANCE_38),   TD(DANCE_39),   TD(DANCE_40),   TD(DANCE_41),   RGB_VAD,                                        RGB_VAI,        TD(DANCE_18),   TD(DANCE_19),   TD(DANCE_42),   TD(DANCE_21),   KC_MS_WH_UP,
+    KC_ESCAPE,      TD(DANCE_38),   TD(DANCE_39),   TD(DANCE_40),   TD(DANCE_41),   RGB_VAD,                                        RGB_VAI,        TD(DANCE_18),   TD(DANCE_19),   TD(DANCE_42),   TD(DANCE_21),   KC_UP,
 #else
-    KC_ESCAPE,      TD(DANCE_38),   TD(DANCE_39),   TD(DANCE_40),   TD(DANCE_14),   RGB_VAD,                                        RGB_VAI,        TD(DANCE_18),   TD(DANCE_19),   TD(DANCE_42),   TD(DANCE_21),   KC_MS_WH_UP,
+    KC_ESCAPE,      TD(DANCE_38),   TD(DANCE_39),   TD(DANCE_40),   TD(DANCE_14),   RGB_VAD,                                        RGB_VAI,        TD(DANCE_18),   TD(DANCE_19),   TD(DANCE_42),   TD(DANCE_21),   KC_UP,
 #endif
-    KC_TAB,         KC_KP_6,        KC_KP_4,        KC_KP_8,        KC_KP_0,        KC_KP_2,                                        KC_KP_3,        KC_KP_1,        KC_KP_9,        KC_KP_5,        KC_KP_7,        KC_MS_WH_DOWN,
+    KC_TAB,         KC_KP_6,        KC_KP_4,        KC_KP_8,        KC_KP_0,        KC_KP_2,                                        KC_KP_3,        KC_KP_1,        KC_KP_9,        KC_KP_5,        KC_KP_7,        KC_DOWN,
 #ifndef VM_USE_NUMPAD_ONLY
-    KC_CAPS,        KC_KP_DOT,      KC_MS_BTN3,     KC_MS_BTN2,     KC_MS_BTN1,     KC_BSPC,                                        ST_MACRO_24,    TD(DANCE_43),   TD(DANCE_44),   TD(DANCE_45),   KC_KP_COMMA,    CW_TOGG,
+    KC_CAPS,        KC_KP_DOT,      KC_MS_BTN3,     KC_MS_BTN2,     KC_MS_BTN1,     KC_BSPC,                                        TD(DANCE_6),    TD(DANCE_43),   TD(DANCE_44),   TD(DANCE_45),   KC_KP_COMMA,    CW_TOGG,
 #else
-    KC_CAPS,        KC_KP_DOT,      KC_MS_BTN3,     KC_MS_BTN2,     KC_MS_BTN1,     KC_BSPC,                                        ST_MACRO_24,    TD(DANCE_43),   TD(DANCE_44),   TD(DANCE_45),   KC_KP_COMMA,    OSM(MOD_RSFT),
+    KC_CAPS,        KC_KP_DOT,      KC_MS_BTN3,     KC_MS_BTN2,     KC_MS_BTN1,     KC_BSPC,                                        TD(DANCE_6),    TD(DANCE_43),   TD(DANCE_44),   TD(DANCE_45),   KC_KP_COMMA,    OSM(MOD_RSFT),
 #endif
-    TD(DANCE_2),    KC_MS_WH_UP,    KC_MS_WH_DOWN,  RGB_TOG,        TOGGLE_LAYER_COLOR,KC_MS_WH_LEFT,                               KC_MS_WH_RIGHT, KC_SPACE,       TD(DANCE_46),   KC_MS_LEFT,     KC_MS_RIGHT,    OSM(MOD_RGUI),
+    TD(DANCE_2),    TD(DANCE_3),    TD(DANCE_4),    RGB_TOG,        TOGGLE_LAYER_COLOR,TOGGLE_SCROLL,                               ST_MACRO_24,    KC_SPACE,       TD(DANCE_46),   KC_MS_LEFT,     KC_MS_RIGHT,    OSM(MOD_RGUI),
                                                                                     KC_KP_ENTER,    TD(DANCE_5),    TD(DANCE_7),    TD(DANCE_47)
   ),
 #ifdef AUTOMOUSE_LAYER
   [AUTOMOUSE_LAYER] = LAYOUT_voyager(
-    KC_TRANSPARENT, KC_MS_BTN7,     KC_MS_BTN6,     KC_MS_BTN5,     KC_MS_BTN4,     KC_MS_WH_LEFT,                                  KC_APPLICATION, TD(DANCE_43),   TD(DANCE_44),   TD(DANCE_45),   KC_CALCULATOR,  KC_TRANSPARENT,
-    TD(DANCE_BTN8), ST_MACRO_22,    ST_MACRO_21,    ST_MACRO_23,    TOGGLE_SCROLL,  KC_MS_WH_RIGHT,                                 KC_MY_COMPUTER, KC_WWW_SEARCH,  KC_MEDIA_EJECT, KC_WWW_HOME,    KC_MAIL,        KC_TRANSPARENT,
-    KC_TRANSPARENT, ST_MACRO_12,    ST_MACRO_27,    NAVIGATOR_DEC_CPI,NAVIGATOR_INC_CPI,KC_TRANSPARENT,                             KC_NUM,         KC_KP_MINUS,    KC_KP_EQUAL,    KC_KP_PLUS,     ST_MACRO_26,    KC_TRANSPARENT,
-    KC_TRANSPARENT, KC_MS_WH_UP,    KC_MS_WH_DOWN,  QK_LLCK,        KC_MS_BTN2,     KC_MS_BTN3,                                     TD(DANCE_QUIT), KC_ENTER,       QK_LLCK,        KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
+    KC_TRANSPARENT, KC_MS_BTN7,     KC_MS_BTN6,     KC_MS_BTN5,     KC_MS_BTN4,     NAVIGATOR_INC_CPI,                              KC_CAPS,        TD(DANCE_43),   TD(DANCE_44),   TD(DANCE_45),   KC_CALCULATOR,  KC_TRANSPARENT,
+    TD(DANCE_BTN8), ST_MACRO_22,    ST_MACRO_21,    ST_MACRO_23,    TOGGLE_SCROLL,  NAVIGATOR_DEC_CPI,                              KC_MY_COMPUTER, KC_WWW_SEARCH,  KC_MEDIA_EJECT, KC_WWW_HOME,    KC_MAIL,        KC_TRANSPARENT,
+    KC_TRANSPARENT, ST_MACRO_12,    ST_MACRO_27,    KC_AUDIO_MUTE,  KC_APPLICATION, KC_TRANSPARENT,                                 KC_NUM,         KC_KP_MINUS,    KC_KP_EQUAL,    KC_KP_PLUS,     ST_MACRO_26,    KC_TRANSPARENT,
+    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, QK_LLCK,        KC_MS_BTN2,     KC_MS_BTN3,                                     TD(DANCE_QUIT), KC_ENTER,       QK_LLCK,        KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
                                                                                     KC_MS_BTN1,     KC_TRANSPARENT, KC_TRANSPARENT, KC_DELETE
   ),
 #endif
@@ -348,10 +348,10 @@ const uint8_t PROGMEM ledmap[][RGB_MATRIX_LED_COUNT][3] = {
 
     [VM_APPLICATION_WEB_LAYER] = { {0,0,255}, {0,0,160}, {0,0,160}, {0,0,160}, {0,0,160}, {0,0,160}, {0,0,160}, {0,0,160}, {0,0,160}, {0,0,160}, {0,0,160}, {0,0,160}, {0,245,245}, {0,0,160}, {0,0,160}, {0,0,160}, {0,0,160}, {225,224,255}, {0,245,245}, {46,215,244}, {46,215,244}, {0,0,255}, {0,0,160}, {0,0,160}, {131,255,255}, {225,224,255}, {0,0,160}, {0,0,160}, {0,0,160}, {0,0,160}, {0,0,160}, {46,215,244}, {0,0,160}, {0,0,160}, {0,0,160}, {0,0,160}, {0,0,160}, {46,215,244}, {131,255,255}, {0,0,160}, {0,0,160}, {0,0,160}, {0,0,160}, {0,245,245}, {0,0,160}, {0,0,160}, {0,0,255}, {46,215,244}, {46,215,244}, {0,245,245}, {19,245,255}, {0,0,160} },
 #ifdef AUTOMOUSE_LAYER
-    [FUNCTION_LAYER] = { {225,224,255}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {74,255,255}, {62,219,138}, {62,219,138}, {62,219,138}, {62,219,138}, {62,219,138}, {62,219,138}, {206,255,160}, {62,219,138}, {131,255,255}, {131,255,255}, {131,255,255}, {225,224,255}, {0,245,245}, {86,95,255}, {86,95,255}, {74,255,255}, {74,255,255}, {86,95,255}, {225,224,255}, {19,245,255}, {74,255,255}, {19,245,255}, {19,245,255}, {19,245,255}, {19,245,255}, {46,215,244}, {62,219,138}, {62,219,138}, {62,219,138}, {62,219,138}, {62,219,138}, {46,215,244}, {0,219,138}, {19,245,255}, {74,255,255}, {19,245,255}, {62,219,138}, {0,245,245}, {86,95,255}, {62,219,138}, {152,255,255}, {46,215,244}, {46,215,244}, {0,245,245}, {19,245,255}, {152,255,255} },
-    [AUTOMOUSE_LAYER] = { {225,224,255}, {188,255,255}, {188,255,255}, {188,255,255}, {188,255,255}, {131,255,255}, {188,255,255}, {0,0,160}, {0,0,160}, {0,0,160}, {86,237,170}, {131,255,255}, {0,245,245}, {62,219,138}, {0,219,138}, {86,237,170}, {86,237,170}, {225,224,255}, {0,245,245}, {131,255,255}, {131,255,255}, {0,0,255}, {188,255,255}, {188,255,255}, {188,255,255}, {19,245,255}, {86,95,255}, {19,245,255}, {74,255,255}, {19,245,255}, {86,95,255}, {46,215,244}, {86,95,255}, {86,95,255}, {86,95,255}, {86,95,255}, {86,95,255}, {46,215,244}, {225,224,255}, {0,0,160}, {168,218,204}, {0,0,160}, {62,219,138}, {0,245,245}, {0,219,138}, {225,224,255}, {0,0,255}, {46,215,244}, {46,215,244}, {0,245,245}, {19,245,255}, {225,224,255} },
+    [FUNCTION_LAYER] = { {225,224,255}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {74,255,255}, {62,219,138}, {62,219,138}, {62,219,138}, {62,219,138}, {62,219,138}, {62,219,138}, {206,255,160}, {62,219,138}, {131,255,255}, {131,255,255}, {131,255,255}, {225,224,255}, {0,245,245}, {46,215,244}, {46,215,244}, {74,255,255}, {74,255,255}, {86,237,170}, {225,224,255}, {19,245,255}, {74,255,255}, {19,245,255}, {19,245,255}, {19,245,255}, {19,245,255}, {46,215,244}, {62,219,138}, {62,219,138}, {62,219,138}, {62,219,138}, {62,219,138}, {46,215,244}, {0,245,245}, {19,245,255}, {74,255,255}, {19,245,255}, {62,219,138}, {0,245,245}, {0,219,138}, {152,255,255}, {152,255,255}, {46,215,244}, {46,215,244}, {0,245,245}, {19,245,255}, {152,255,255} },
+    [AUTOMOUSE_LAYER] = { {225,224,255}, {188,255,255}, {188,255,255}, {188,255,255}, {188,255,255}, {86,237,170}, {188,255,255}, {0,0,160}, {0,0,160}, {0,0,160}, {86,237,170}, {86,237,170}, {0,245,245}, {62,219,138}, {0,219,138}, {0,245,245}, {86,95,255}, {225,224,255}, {0,245,245}, {46,215,244}, {46,215,244}, {0,0,255}, {188,255,255}, {188,255,255}, {188,255,255}, {19,245,255}, {206,255,160}, {19,245,255}, {74,255,255}, {19,245,255}, {86,95,255}, {46,215,244}, {86,95,255}, {86,95,255}, {86,95,255}, {86,95,255}, {86,95,255}, {46,215,244}, {206,255,160}, {0,0,160}, {168,218,204}, {0,0,160}, {62,219,138}, {0,245,245}, {0,219,138}, {225,224,255}, {0,0,255}, {46,215,244}, {46,215,244}, {0,245,245}, {19,245,255}, {225,224,255} },
 #else
-    [FUNCTION_LAYER] = { {225,224,255}, {0,0,255}, {0,0,255}, {0,0,255}, {19,245,255}, {74,255,255}, {62,219,138}, {62,219,138}, {62,219,138}, {62,219,138}, {62,219,138}, {62,219,138}, {206,255,160}, {62,219,138}, {131,255,255}, {131,255,255}, {131,255,255}, {225,224,255}, {0,245,245}, {86,95,255}, {86,95,255}, {74,255,255}, {74,255,255}, {86,95,255}, {225,224,255}, {19,245,255}, {74,255,255}, {19,245,255}, {19,245,255}, {19,245,255}, {19,245,255}, {46,215,244}, {62,219,138}, {62,219,138}, {62,219,138}, {62,219,138}, {62,219,138}, {46,215,244}, {0,219,138}, {19,245,255}, {74,255,255}, {19,245,255}, {62,219,138}, {0,245,245}, {86,95,255}, {62,219,138}, {152,255,255}, {46,215,244}, {46,215,244}, {0,245,245}, {19,245,255}, {152,255,255} },
+    [FUNCTION_LAYER] = { {225,224,255}, {0,0,255}, {0,0,255}, {0,0,255}, {19,245,255}, {74,255,255}, {62,219,138}, {62,219,138}, {62,219,138}, {62,219,138}, {62,219,138}, {62,219,138}, {206,255,160}, {62,219,138}, {131,255,255}, {131,255,255}, {131,255,255}, {225,224,255}, {0,245,245}, {46,215,244}, {46,215,244}, {74,255,255}, {74,255,255}, {86,237,170}, {225,224,255}, {19,245,255}, {74,255,255}, {19,245,255}, {19,245,255}, {19,245,255}, {19,245,255}, {46,215,244}, {62,219,138}, {62,219,138}, {62,219,138}, {62,219,138}, {62,219,138}, {46,215,244}, {0,245,245}, {19,245,255}, {74,255,255}, {19,245,255}, {62,219,138}, {0,245,245}, {0,219,138}, {152,255,255}, {152,255,255}, {46,215,244}, {46,215,244}, {0,245,245}, {19,245,255}, {152,255,255} },
 #endif
 #ifdef VM_USE_LEFTPAD_ONLY
     [VM_USE_LEFTPAD_ONLY] = { {225,224,255}, {152,255,255}, {152,255,255}, {152,255,255}, {152,255,255}, {152,255,255}, {152,255,255}, {152,255,255}, {152,255,255}, {152,255,255}, {152,255,255}, {152,255,255}, {0,245,245}, {152,255,255}, {152,255,255}, {152,255,255}, {152,255,255}, {225,224,255}, {0,245,245}, {46,215,244}, {46,215,244}, {0,0,255}, {152,255,255}, {152,255,255}, {225,224,255}, {19,245,255}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0} },
@@ -2172,22 +2172,22 @@ void dance_46_reset(tap_dance_state_t *state, void *user_data);
 
 void on_dance_46(tap_dance_state_t *state, void *user_data) {
     if(state->count == 3) {
-        tap_code16(KC_MAIL);
-        tap_code16(KC_MAIL);
-        tap_code16(KC_MAIL);
+        tap_code16(KC_WWW_HOME);
+        tap_code16(KC_WWW_HOME);
+        tap_code16(KC_WWW_HOME);
     }
     if(state->count > 3) {
-        tap_code16(KC_MAIL);
+        tap_code16(KC_WWW_HOME);
     }
 }
 
 void dance_46_finished(tap_dance_state_t *state, void *user_data) {
     dance_state[DANCE_46].step = dance_step(state);
     switch (dance_state[DANCE_46].step) {
-        case SINGLE_TAP: register_code16(KC_MAIL); break;
+        case SINGLE_TAP: register_code16(KC_WWW_HOME); break;
         case SINGLE_HOLD: register_code16(KC_MY_COMPUTER); break;
-        case DOUBLE_TAP: register_code16(KC_MAIL); register_code16(KC_MAIL); break;
-        case DOUBLE_SINGLE_TAP: tap_code16(KC_MAIL); register_code16(KC_MAIL);
+        case DOUBLE_TAP: register_code16(KC_WWW_HOME); register_code16(KC_WWW_HOME); break;
+        case DOUBLE_SINGLE_TAP: tap_code16(KC_WWW_HOME); register_code16(KC_WWW_HOME);
     }
 }
 
@@ -2207,32 +2207,32 @@ void dance_47_reset(tap_dance_state_t *state, void *user_data);
 
 void on_dance_47(tap_dance_state_t *state, void *user_data) {
     if(state->count == 3) {
-        tap_code16(KC_WWW_HOME);
-        tap_code16(KC_WWW_HOME);
-        tap_code16(KC_WWW_HOME);
+        tap_code16(KC_APPLICATION);
+        tap_code16(KC_APPLICATION);
+        tap_code16(KC_APPLICATION);
     }
     if(state->count > 3) {
-        tap_code16(KC_WWW_HOME);
+        tap_code16(KC_APPLICATION);
     }
 }
 
 void dance_47_finished(tap_dance_state_t *state, void *user_data) {
     dance_state[DANCE_47].step = dance_step(state);
     switch (dance_state[DANCE_47].step) {
-        case SINGLE_TAP: register_code16(KC_WWW_HOME); break;
+        case SINGLE_TAP: register_code16(KC_APPLICATION); break;
         case SINGLE_HOLD: register_code16(KC_CALCULATOR); break;
-        case DOUBLE_TAP: register_code16(KC_WWW_HOME); register_code16(KC_WWW_HOME); break;
-        case DOUBLE_SINGLE_TAP: tap_code16(KC_WWW_HOME); register_code16(KC_WWW_HOME);
+        case DOUBLE_TAP: register_code16(KC_APPLICATION); register_code16(KC_APPLICATION); break;
+        case DOUBLE_SINGLE_TAP: tap_code16(KC_APPLICATION); register_code16(KC_APPLICATION);
     }
 }
 
 void dance_47_reset(tap_dance_state_t *state, void *user_data) {
     wait_ms(10);
     switch (dance_state[DANCE_47].step) {
-        case SINGLE_TAP: unregister_code16(KC_WWW_HOME); break;
+        case SINGLE_TAP: unregister_code16(KC_APPLICATION); break;
         case SINGLE_HOLD: unregister_code16(KC_CALCULATOR); break;
-        case DOUBLE_TAP: unregister_code16(KC_WWW_HOME); break;
-        case DOUBLE_SINGLE_TAP: unregister_code16(KC_WWW_HOME); break;
+        case DOUBLE_TAP: unregister_code16(KC_APPLICATION); break;
+        case DOUBLE_SINGLE_TAP: unregister_code16(KC_APPLICATION); break;
     }
     dance_state[DANCE_47].step = 0;
 }
@@ -3507,15 +3507,16 @@ bool process_detected_host_os_kb(os_variant_t detected_os) {
         case OS_IOS:
             // This variable identify that we are running on a mac
             activeNumLockLed = false;
-
-        case OS_WINDOWS:
             layer_move(QWERTY_BASE_LAYER);
             break;
+
         case OS_LINUX:
         case OS_UNSURE:
+            linuxSystem = true;
+
+        case OS_WINDOWS:
             layer_move(BEPO_BASE_LAYER);
 
-            linuxSystem = true;
             break;
     }
 
