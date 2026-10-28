@@ -40,6 +40,9 @@ enum custom_keycodes {
   ST_MACRO_27,
   ST_MACRO_28,
   ST_MACRO_29,
+  ST_MACRO_30,
+  ST_MACRO_31,
+  ST_MACRO_32,
 };
 
 static bool activeNumLockLed = true;
@@ -104,7 +107,7 @@ enum tap_dance_codes {
   DANCE_WEB2,
   DANCE_QUIT,
   DANCE_BTN2,
-  DANCE_BTN8,
+  DANCE_TAB,
 #ifdef VM_USE_LEFTPAD_ONLY
   DANCE_49,
   DANCE_50,
@@ -226,10 +229,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 #ifdef AUTOMOUSE_LAYER
   [AUTOMOUSE_LAYER] = LAYOUT_voyager(
-    KC_TRANSPARENT, KC_MS_BTN7,     KC_MS_BTN6,     KC_MS_BTN5,     KC_MS_BTN4,     NAVIGATOR_INC_CPI,                              KC_CAPS,        TD(DANCE_43),   TD(DANCE_44),   TD(DANCE_45),   KC_CALCULATOR,  KC_TRANSPARENT,
-    TD(DANCE_BTN8), ST_MACRO_22,    ST_MACRO_21,    ST_MACRO_23,    TOGGLE_SCROLL,  NAVIGATOR_DEC_CPI,                              KC_MY_COMPUTER, KC_WWW_SEARCH,  KC_MEDIA_EJECT, KC_WWW_HOME,    KC_MAIL,        KC_TRANSPARENT,
-    KC_TRANSPARENT, ST_MACRO_12,    ST_MACRO_27,    KC_AUDIO_MUTE,  KC_APPLICATION, KC_TRANSPARENT,                                 KC_NUM,         KC_KP_MINUS,    KC_KP_EQUAL,    KC_KP_PLUS,     ST_MACRO_26,    KC_TRANSPARENT,
-    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, QK_LLCK,        KC_MS_BTN2,     KC_MS_BTN3,                                     TD(DANCE_QUIT), KC_ENTER,       QK_LLCK,        KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
+    KC_TRANSPARENT, ST_MACRO_26,    ST_MACRO_30,    ST_MACRO_31,    ST_MACRO_32,    NAVIGATOR_INC_CPI,                              KC_CAPS,        TD(DANCE_43),   TD(DANCE_44),   TD(DANCE_45),   KC_CALCULATOR,  KC_TRANSPARENT,
+    TD(DANCE_TAB),  ST_MACRO_22,    ST_MACRO_21,    ST_MACRO_23,    TOGGLE_SCROLL,  NAVIGATOR_DEC_CPI,                              KC_MY_COMPUTER, KC_WWW_SEARCH,  KC_MEDIA_EJECT, KC_WWW_HOME,    KC_MAIL,        KC_TRANSPARENT,
+    KC_TRANSPARENT, ST_MACRO_12,    ST_MACRO_27,    KC_AUDIO_MUTE,  KC_APPLICATION, KC_TRANSPARENT,                                 KC_NUM,         KC_KP_MINUS,    KC_KP_EQUAL,    KC_KP_PLUS,     TD(DANCE_QUIT), KC_TRANSPARENT,
+    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, QK_LLCK,        KC_MS_BTN2,     KC_MS_BTN3,                                     KC_SPACE,       KC_ENTER,       QK_LLCK,        KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
                                                                                     KC_MS_BTN1,     KC_TRANSPARENT, KC_TRANSPARENT, KC_DELETE
   ),
 #endif
@@ -349,7 +352,7 @@ const uint8_t PROGMEM ledmap[][RGB_MATRIX_LED_COUNT][3] = {
     [VM_APPLICATION_WEB_LAYER] = { {0,0,255}, {0,0,160}, {0,0,160}, {0,0,160}, {0,0,160}, {0,0,160}, {0,0,160}, {0,0,160}, {0,0,160}, {0,0,160}, {0,0,160}, {0,0,160}, {0,245,245}, {0,0,160}, {0,0,160}, {0,0,160}, {0,0,160}, {225,224,255}, {0,245,245}, {46,215,244}, {46,215,244}, {0,0,255}, {0,0,160}, {0,0,160}, {131,255,255}, {225,224,255}, {0,0,160}, {0,0,160}, {0,0,160}, {0,0,160}, {0,0,160}, {46,215,244}, {0,0,160}, {0,0,160}, {0,0,160}, {0,0,160}, {0,0,160}, {46,215,244}, {131,255,255}, {0,0,160}, {0,0,160}, {0,0,160}, {0,0,160}, {0,245,245}, {0,0,160}, {0,0,160}, {0,0,255}, {46,215,244}, {46,215,244}, {0,245,245}, {19,245,255}, {0,0,160} },
 #ifdef AUTOMOUSE_LAYER
     [FUNCTION_LAYER] = { {225,224,255}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {74,255,255}, {62,219,138}, {62,219,138}, {62,219,138}, {62,219,138}, {62,219,138}, {62,219,138}, {206,255,160}, {62,219,138}, {131,255,255}, {131,255,255}, {131,255,255}, {225,224,255}, {0,245,245}, {46,215,244}, {46,215,244}, {74,255,255}, {74,255,255}, {86,237,170}, {225,224,255}, {19,245,255}, {74,255,255}, {19,245,255}, {19,245,255}, {19,245,255}, {19,245,255}, {46,215,244}, {62,219,138}, {62,219,138}, {62,219,138}, {62,219,138}, {62,219,138}, {46,215,244}, {0,245,245}, {19,245,255}, {74,255,255}, {19,245,255}, {62,219,138}, {0,245,245}, {0,219,138}, {152,255,255}, {152,255,255}, {46,215,244}, {46,215,244}, {0,245,245}, {19,245,255}, {152,255,255} },
-    [AUTOMOUSE_LAYER] = { {225,224,255}, {188,255,255}, {188,255,255}, {188,255,255}, {188,255,255}, {86,237,170}, {188,255,255}, {0,0,160}, {0,0,160}, {0,0,160}, {86,237,170}, {86,237,170}, {0,245,245}, {62,219,138}, {0,219,138}, {0,245,245}, {86,95,255}, {225,224,255}, {0,245,245}, {46,215,244}, {46,215,244}, {0,0,255}, {188,255,255}, {188,255,255}, {188,255,255}, {19,245,255}, {206,255,160}, {19,245,255}, {74,255,255}, {19,245,255}, {86,95,255}, {46,215,244}, {86,95,255}, {86,95,255}, {86,95,255}, {86,95,255}, {86,95,255}, {46,215,244}, {206,255,160}, {0,0,160}, {168,218,204}, {0,0,160}, {62,219,138}, {0,245,245}, {0,219,138}, {225,224,255}, {0,0,255}, {46,215,244}, {46,215,244}, {0,245,245}, {19,245,255}, {225,224,255} },
+    [AUTOMOUSE_LAYER] = { {225,224,255}, {62,219,138}, {168,218,204}, {168,218,204}, {168,218,204}, {86,237,170}, {188,255,255}, {0,0,160}, {0,0,160}, {0,0,160}, {86,237,170}, {86,237,170}, {0,245,245}, {62,219,138}, {0,219,138}, {0,245,245}, {86,95,255}, {225,224,255}, {0,245,245}, {46,215,244}, {46,215,244}, {0,0,255}, {188,255,255}, {188,255,255}, {188,255,255}, {19,245,255}, {206,255,160}, {19,245,255}, {74,255,255}, {19,245,255}, {86,95,255}, {46,215,244}, {86,95,255}, {86,95,255}, {86,95,255}, {86,95,255}, {86,95,255}, {46,215,244}, {206,255,160}, {0,0,160}, {168,218,204}, {0,0,160}, {0,219,138}, {0,245,245}, {0,0,160}, {225,224,255}, {0,0,255}, {46,215,244}, {46,215,244}, {0,245,245}, {19,245,255}, {225,224,255} },
 #else
     [FUNCTION_LAYER] = { {225,224,255}, {0,0,255}, {0,0,255}, {0,0,255}, {19,245,255}, {74,255,255}, {62,219,138}, {62,219,138}, {62,219,138}, {62,219,138}, {62,219,138}, {62,219,138}, {206,255,160}, {62,219,138}, {131,255,255}, {131,255,255}, {131,255,255}, {225,224,255}, {0,245,245}, {46,215,244}, {46,215,244}, {74,255,255}, {74,255,255}, {86,237,170}, {225,224,255}, {19,245,255}, {74,255,255}, {19,245,255}, {19,245,255}, {19,245,255}, {19,245,255}, {46,215,244}, {62,219,138}, {62,219,138}, {62,219,138}, {62,219,138}, {62,219,138}, {46,215,244}, {0,245,245}, {19,245,255}, {74,255,255}, {19,245,255}, {62,219,138}, {0,245,245}, {0,219,138}, {152,255,255}, {152,255,255}, {46,215,244}, {46,215,244}, {0,245,245}, {19,245,255}, {152,255,255} },
 #endif
@@ -2741,62 +2744,57 @@ void dance_btn2_reset(tap_dance_state_t *state, void *user_data) {
     }
     dance_state[DANCE_BTN2].step = 0;
 }
-void on_dance_btn8(tap_dance_state_t *state, void *user_data);
-void dance_btn8_finished(tap_dance_state_t *state, void *user_data);
-void dance_btn8_reset(tap_dance_state_t *state, void *user_data);
+void on_dance_tab(tap_dance_state_t *state, void *user_data);
+void dance_tab_finished(tap_dance_state_t *state, void *user_data);
+void dance_tab_reset(tap_dance_state_t *state, void *user_data);
 
-void on_dance_btn8(tap_dance_state_t *state, void *user_data) {
+void on_dance_tab(tap_dance_state_t *state, void *user_data) {
     if(state->count == 3) {
-        if (layer_state_is(6) || layer_state_is(QWERTY_BASE_LAYER)) {
-            tap_code16(RCTL(KC_J));
-            tap_code16(RCTL(KC_J));
-            tap_code16(RCTL(KC_J));
-        } else {
-            tap_code16(RCTL(BP_J));
-            tap_code16(RCTL(BP_J));
-            tap_code16(RCTL(BP_J));
-        }
+        tap_code16(KC_TAB);
+        tap_code16(KC_TAB);
+        tap_code16(KC_TAB);
     }
     if(state->count > 3) {
-        if (layer_state_is(6) || layer_state_is(QWERTY_BASE_LAYER)) {
-            tap_code16(RCTL(KC_J));
-        } else {
-            tap_code16(RCTL(BP_J));
-        }
+        tap_code16(KC_TAB);
     }
 }
 
-void dance_btn8_finished(tap_dance_state_t *state, void *user_data) {
-    dance_state[DANCE_BTN8].step = dance_step(state);
-    switch (dance_state[DANCE_BTN8].step) {
+void dance_tab_finished(tap_dance_state_t *state, void *user_data) {
+    dance_state[DANCE_TAB].step = dance_step(state);
+    switch (dance_state[DANCE_TAB].step) {
+        case DOUBLE_SINGLE_TAP:
+               tap_code16(KC_TAB);
         case SINGLE_TAP:
         case SINGLE_HOLD:
+               register_code16(KC_TAB);
+               break;
+        case DOUBLE_TAP:
                if (layer_state_is(6) || layer_state_is(QWERTY_BASE_LAYER)) {
                    register_code16(RCTL(KC_J));
                } else {
                    register_code16(RCTL(BP_J));
                }
                break;
-        case DOUBLE_TAP: register_code16(KC_MS_BTN8); break;
-        case DOUBLE_SINGLE_TAP: tap_code16(KC_MS_BTN8); register_code16(KC_MS_BTN8);
     }
 }
 
-void dance_btn8_reset(tap_dance_state_t *state, void *user_data) {
+void dance_tab_reset(tap_dance_state_t *state, void *user_data) {
     wait_ms(10);
-    switch (dance_state[DANCE_BTN8].step) {
+    switch (dance_state[DANCE_TAB].step) {
+        case DOUBLE_SINGLE_TAP:
         case SINGLE_TAP:
         case SINGLE_HOLD:
+                unregister_code16(KC_TAB);
+                break;
+        case DOUBLE_TAP:
                if (layer_state_is(6) || layer_state_is(QWERTY_BASE_LAYER)) {
                    unregister_code16(RCTL(KC_J));
                } else {
                    unregister_code16(RCTL(BP_J));
                }
                break;
-        case DOUBLE_TAP: unregister_code16(KC_MS_BTN8); break;
-        case DOUBLE_SINGLE_TAP: unregister_code16(KC_MS_BTN8); break;
     }
-    dance_state[DANCE_BTN8].step = 0;
+    dance_state[DANCE_TAB].step = 0;
 }
 #ifdef VM_USE_LEFTPAD_ONLY
 void dance_49_finished(tap_dance_state_t *state, void *user_data);
@@ -2950,7 +2948,7 @@ tap_dance_action_t tap_dance_actions[] = {
         [DANCE_WEB2] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, dance_web2_finished, dance_web2_reset),
         [DANCE_QUIT] = ACTION_TAP_DANCE_FN_ADVANCED(on_dance_quit, dance_quit_finished, dance_quit_reset),
         [DANCE_BTN2] = ACTION_TAP_DANCE_FN_ADVANCED(on_dance_btn2, dance_btn2_finished, dance_btn2_reset),
-        [DANCE_BTN8] = ACTION_TAP_DANCE_FN_ADVANCED(on_dance_btn8, dance_btn8_finished, dance_btn8_reset),
+        [DANCE_TAB] = ACTION_TAP_DANCE_FN_ADVANCED(on_dance_tab, dance_tab_finished, dance_tab_reset),
 #ifdef VM_USE_LEFTPAD_ONLY
         [DANCE_49] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, dance_49_finished, dance_49_reset),
         [DANCE_50] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, dance_50_finished, dance_50_reset),
@@ -3266,6 +3264,35 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         SEND_STRING(SS_RALT(SS_RSFT(SS_TAP(X_BSLS))));
       } else {
         SEND_STRING(SS_RALT(SS_TAP(X_RBRC)));
+      }
+    }
+    break;
+    case ST_MACRO_30:
+    if (record->event.pressed) {
+      if (layer_state_is(6)) {
+         SEND_STRING(SS_RGUI(SS_TAP(X_Z)));
+      } else if (layer_state_is(QWERTY_BASE_LAYER)) {
+         SEND_STRING(SS_RGUI(SS_TAP(X_W)));
+      } else {
+         SEND_STRING(SS_RGUI(SS_TAP(X_RBRC)));
+      }
+    }
+    break;
+    case ST_MACRO_31:
+    if (record->event.pressed) {
+      if (layer_state_is(6) || layer_state_is(QWERTY_BASE_LAYER)) {
+         SEND_STRING(SS_RGUI(SS_TAP(X_N)));
+      } else {
+         SEND_STRING(SS_RGUI(SS_TAP(X_SCLN)));
+      }
+    }
+    break;
+    case ST_MACRO_32:
+    if (record->event.pressed) {
+      if (layer_state_is(6) || layer_state_is(QWERTY_BASE_LAYER)) {
+         SEND_STRING(SS_RGUI(SS_TAP(X_S)));
+      } else {
+         SEND_STRING(SS_RGUI(SS_TAP(X_K)));
       }
     }
     break;
