@@ -43,6 +43,8 @@ enum custom_keycodes {
   ST_MACRO_30,
   ST_MACRO_31,
   ST_MACRO_32,
+  ST_MACRO_33,
+  ST_MACRO_34,
 };
 
 static bool activeNumLockLed = true;
@@ -229,9 +231,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 #ifdef AUTOMOUSE_LAYER
   [AUTOMOUSE_LAYER] = LAYOUT_voyager(
-    KC_TRANSPARENT, ST_MACRO_26,    ST_MACRO_30,    ST_MACRO_31,    ST_MACRO_32,    NAVIGATOR_INC_CPI,                              KC_CAPS,        TD(DANCE_43),   TD(DANCE_44),   TD(DANCE_45),   KC_CALCULATOR,  KC_TRANSPARENT,
-    TD(DANCE_TAB),  ST_MACRO_22,    ST_MACRO_21,    ST_MACRO_23,    TOGGLE_SCROLL,  NAVIGATOR_DEC_CPI,                              KC_MY_COMPUTER, KC_WWW_SEARCH,  KC_MEDIA_EJECT, KC_WWW_HOME,    KC_MAIL,        KC_TRANSPARENT,
-    KC_TRANSPARENT, ST_MACRO_12,    ST_MACRO_27,    KC_AUDIO_MUTE,  KC_APPLICATION, KC_TRANSPARENT,                                 KC_NUM,         KC_KP_MINUS,    KC_KP_EQUAL,    KC_KP_PLUS,     TD(DANCE_QUIT), KC_TRANSPARENT,
+    KC_TRANSPARENT, ST_MACRO_26,    ST_MACRO_30,    ST_MACRO_31,    ST_MACRO_32,    TD(DANCE_15),                                   KC_CAPS,        ST_MACRO_33,    KC_CALCULATOR,NAVIGATOR_DEC_CPI,NAVIGATOR_INC_CPI,KC_TRANSPARENT,
+    TD(DANCE_TAB),  ST_MACRO_22,    ST_MACRO_21,    ST_MACRO_23,    TOGGLE_SCROLL,  KC_NUM,                                         KC_MY_COMPUTER, KC_WWW_SEARCH,  KC_MEDIA_EJECT, KC_WWW_HOME,    KC_MAIL,        KC_TRANSPARENT,
+    KC_TRANSPARENT, ST_MACRO_12,    ST_MACRO_27,    ST_MACRO_34,    KC_APPLICATION, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_KP_MINUS,    KC_KP_EQUAL,    KC_KP_PLUS,     TD(DANCE_QUIT), KC_TRANSPARENT,
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, QK_LLCK,        KC_MS_BTN2,     KC_MS_BTN3,                                     KC_SPACE,       KC_ENTER,       QK_LLCK,        KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
                                                                                     KC_MS_BTN1,     KC_TRANSPARENT, KC_TRANSPARENT, KC_DELETE
   ),
@@ -316,8 +318,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 #endif
 };
 
-
-
 extern rgb_config_t rgb_matrix_config;
 
 RGB hsv_to_rgb_with_value(HSV hsv) {
@@ -352,7 +352,7 @@ const uint8_t PROGMEM ledmap[][RGB_MATRIX_LED_COUNT][3] = {
     [VM_APPLICATION_WEB_LAYER] = { {0,0,255}, {0,0,160}, {0,0,160}, {0,0,160}, {0,0,160}, {0,0,160}, {0,0,160}, {0,0,160}, {0,0,160}, {0,0,160}, {0,0,160}, {0,0,160}, {0,245,245}, {0,0,160}, {0,0,160}, {0,0,160}, {0,0,160}, {225,224,255}, {0,245,245}, {46,215,244}, {46,215,244}, {0,0,255}, {0,0,160}, {0,0,160}, {131,255,255}, {225,224,255}, {0,0,160}, {0,0,160}, {0,0,160}, {0,0,160}, {0,0,160}, {46,215,244}, {0,0,160}, {0,0,160}, {0,0,160}, {0,0,160}, {0,0,160}, {46,215,244}, {131,255,255}, {0,0,160}, {0,0,160}, {0,0,160}, {0,0,160}, {0,245,245}, {0,0,160}, {0,0,160}, {0,0,255}, {46,215,244}, {46,215,244}, {0,245,245}, {19,245,255}, {0,0,160} },
 #ifdef AUTOMOUSE_LAYER
     [FUNCTION_LAYER] = { {225,224,255}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {74,255,255}, {62,219,138}, {62,219,138}, {62,219,138}, {62,219,138}, {62,219,138}, {62,219,138}, {206,255,160}, {62,219,138}, {131,255,255}, {131,255,255}, {131,255,255}, {225,224,255}, {0,245,245}, {46,215,244}, {46,215,244}, {74,255,255}, {74,255,255}, {86,237,170}, {225,224,255}, {19,245,255}, {74,255,255}, {19,245,255}, {19,245,255}, {19,245,255}, {19,245,255}, {46,215,244}, {62,219,138}, {62,219,138}, {62,219,138}, {62,219,138}, {62,219,138}, {46,215,244}, {0,245,245}, {19,245,255}, {74,255,255}, {19,245,255}, {62,219,138}, {0,245,245}, {0,219,138}, {152,255,255}, {152,255,255}, {46,215,244}, {46,215,244}, {0,245,245}, {19,245,255}, {152,255,255} },
-    [AUTOMOUSE_LAYER] = { {225,224,255}, {62,219,138}, {168,218,204}, {168,218,204}, {168,218,204}, {86,237,170}, {188,255,255}, {0,0,160}, {0,0,160}, {0,0,160}, {86,237,170}, {86,237,170}, {0,245,245}, {62,219,138}, {0,219,138}, {0,245,245}, {86,95,255}, {225,224,255}, {0,245,245}, {46,215,244}, {46,215,244}, {0,0,255}, {188,255,255}, {188,255,255}, {188,255,255}, {19,245,255}, {206,255,160}, {19,245,255}, {74,255,255}, {19,245,255}, {86,95,255}, {46,215,244}, {86,95,255}, {86,95,255}, {86,95,255}, {86,95,255}, {86,95,255}, {46,215,244}, {206,255,160}, {0,0,160}, {168,218,204}, {0,0,160}, {0,219,138}, {0,245,245}, {0,0,160}, {225,224,255}, {0,0,255}, {46,215,244}, {46,215,244}, {0,245,245}, {19,245,255}, {225,224,255} },
+    [AUTOMOUSE_LAYER] = { {225,224,255}, {62,219,138}, {168,218,204}, {168,218,204}, {168,218,204}, {19,245,255}, {188,255,255}, {0,0,160}, {0,0,160}, {0,0,160}, {86,237,170}, {206,255,160}, {0,245,245}, {62,219,138}, {0,219,138}, {168,218,204}, {86,95,255}, {225,224,255}, {0,245,245}, {46,215,244}, {46,215,244}, {0,0,255}, {188,255,255}, {188,255,255}, {188,255,255}, {19,245,255}, {206,255,160}, {168,218,204}, {86,95,255}, {86,237,170}, {86,237,170}, {46,215,244}, {86,95,255}, {86,95,255}, {86,95,255}, {86,95,255}, {86,95,255}, {46,215,244}, {0,245,245}, {0,0,160}, {168,218,204}, {0,0,160}, {0,219,138}, {0,245,245}, {0,0,160}, {225,224,255}, {0,0,255}, {46,215,244}, {46,215,244}, {0,245,245}, {19,245,255}, {225,224,255} },
 #else
     [FUNCTION_LAYER] = { {225,224,255}, {0,0,255}, {0,0,255}, {0,0,255}, {19,245,255}, {74,255,255}, {62,219,138}, {62,219,138}, {62,219,138}, {62,219,138}, {62,219,138}, {62,219,138}, {206,255,160}, {62,219,138}, {131,255,255}, {131,255,255}, {131,255,255}, {225,224,255}, {0,245,245}, {46,215,244}, {46,215,244}, {74,255,255}, {74,255,255}, {86,237,170}, {225,224,255}, {19,245,255}, {74,255,255}, {19,245,255}, {19,245,255}, {19,245,255}, {19,245,255}, {46,215,244}, {62,219,138}, {62,219,138}, {62,219,138}, {62,219,138}, {62,219,138}, {46,215,244}, {0,245,245}, {19,245,255}, {74,255,255}, {19,245,255}, {62,219,138}, {0,245,245}, {0,219,138}, {152,255,255}, {152,255,255}, {46,215,244}, {46,215,244}, {0,245,245}, {19,245,255}, {152,255,255} },
 #endif
@@ -3269,7 +3269,11 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     break;
     case ST_MACRO_30:
     if (record->event.pressed) {
-      if (layer_state_is(6)) {
+      if (!activeNumLockLed) {
+         SEND_STRING(SS_RCTL(SS_TAP(X_LEFT)));
+      } else if (!linuxSystem) {
+         SEND_STRING(SS_RGUI(SS_RCTL(SS_TAP(X_LEFT))));
+      } else if (layer_state_is(6)) {
          SEND_STRING(SS_RGUI(SS_TAP(X_Z)));
       } else if (layer_state_is(QWERTY_BASE_LAYER)) {
          SEND_STRING(SS_RGUI(SS_TAP(X_W)));
@@ -3280,7 +3284,11 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     break;
     case ST_MACRO_31:
     if (record->event.pressed) {
-      if (layer_state_is(6) || layer_state_is(QWERTY_BASE_LAYER)) {
+      if (!activeNumLockLed) {
+         SEND_STRING(SS_RCTL(SS_TAP(X_UP)));
+      } else if (!linuxSystem) {
+         SEND_STRING(SS_RGUI(SS_TAP(X_TAB)));
+      } else if (layer_state_is(6) || layer_state_is(QWERTY_BASE_LAYER)) {
          SEND_STRING(SS_RGUI(SS_TAP(X_N)));
       } else {
          SEND_STRING(SS_RGUI(SS_TAP(X_SCLN)));
@@ -3289,10 +3297,32 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     break;
     case ST_MACRO_32:
     if (record->event.pressed) {
-      if (layer_state_is(6) || layer_state_is(QWERTY_BASE_LAYER)) {
+      if (!activeNumLockLed) {
+         SEND_STRING(SS_RCTL(SS_TAP(X_RIGHT)));
+      } else if (!linuxSystem) {
+         SEND_STRING(SS_RGUI(SS_RCTL(SS_TAP(X_RIGHT))));
+      } else if (layer_state_is(6) || layer_state_is(QWERTY_BASE_LAYER)) {
          SEND_STRING(SS_RGUI(SS_TAP(X_S)));
       } else {
          SEND_STRING(SS_RGUI(SS_TAP(X_K)));
+      }
+    }
+    break;
+    case ST_MACRO_33:
+    if (record->event.pressed) {
+      if (layer_state_is(6) || layer_state_is(QWERTY_BASE_LAYER)) {
+         SEND_STRING(SS_RGUI(SS_TAP(X_C)));
+      } else {
+         SEND_STRING(SS_RGUI(SS_TAP(X_H)));
+      }
+    }
+    break;
+    case ST_MACRO_34:
+    if (record->event.pressed) {
+      if (layer_state_is(6)) {
+         SEND_STRING(SS_RCTL(SS_TAP(X_Q)));
+      } else {
+         SEND_STRING(SS_RCTL(SS_TAP(X_A)));
       }
     }
     break;
